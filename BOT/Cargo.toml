@@ -1,0 +1,15 @@
+[package]
+name = "test_bot"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+dotenv = "*" # Pour charger les .env
+log = "*" # Logging ergo
+tokio = { version = "*", features = ["rt", "rt-multi-thread", "macros"] } # Runtime async
+# diesel = { version = "*", features = [] } # ORM Database sympa
+
+[dependencies.serenity] # Framework discord sous Rust
+version = "*"
+default-features = false
+features = ["client", "model", "builder", "utils", "native_tls_backend", "gateway"]
