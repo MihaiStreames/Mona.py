@@ -1,2 +1,2 @@
-# Bots.py
-Python / discord.py learning via bot projects
+# Bot moment
+Learning Rust / Python via bots lol
