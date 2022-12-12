@@ -1,6 +1,5 @@
 import discord
 import os
-import urllib.request
 from PIL import Image
 from dotenv import load_dotenv
 
