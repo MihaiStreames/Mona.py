@@ -12,8 +12,6 @@ intents = discord.Intents.all()
 client = discord.Client(command_prefix='!', intents=intents)
 TARGET_CHANNEL_ID = 1050924693626036334
 
-# Listen for messages that contain an image attachment
-
 
 @client.event
 async def on_message(message):
