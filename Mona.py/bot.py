@@ -24,7 +24,7 @@ async def on_message(message):
             # Add overlay
             draw = ImageDraw.Draw(image)
             font = ImageFont.truetype("arial.ttf", 36)
-            draw.text((10, 10), "NIGGERS", font=font, fill=(255, 0, 0))
+            draw.text((10, 10), "lol", font=font, fill=(255, 0, 0))
             image.save("converted.gif")
             # Send the converted GIF back
             await message.channel.send(file=discord.File("converted.gif"))
