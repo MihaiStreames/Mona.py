@@ -1,5 +1,5 @@
 [package]
-name = "test_bot"
+name = "mona"
 version = "0.0.1"
 edition = "2021"
 
@@ -12,4 +12,13 @@ tokio = { version = "*", features = ["rt", "rt-multi-thread", "macros"] } # Runt
 [dependencies.serenity] # Framework discord sous Rust
 version = "*"
 default-features = false
-features = ["client", "model", "builder", "utils", "native_tls_backend", "gateway"]
+features = [
+    "model",
+    "utils",
+    "client",
+    "builder",
+    "gateway",
+    "framework",
+    "standard_framework",
+    "native_tls_backend"
+]

@@ -1,7 +1,22 @@
+use serenity::framework::standard::macros::*;
+use serenity::framework::standard::*;
+use serenity::model::prelude::*;
 use serenity::async_trait;
 use serenity::prelude::*;
-use serenity::model::prelude::*;
-use serenity::model::channel::Message;
+
+macro_rules! try_return {
+    ($try: expr, $kind: ident, $ret: expr) => {
+        if let $kind(v) = $try { v } else { return $ret }
+    };
+
+    ($try: expr, $kind: ident) => {
+        try_return!($try, $kind, ())
+    };
+
+    ($try: expr) => {
+        try_return!($try, Some, ())
+    };
+}
 
 struct Handler;
 
@@ -11,94 +26,64 @@ impl EventHandler for Handler {
         println!("{} is connected!", ready.user.name);
     }
 
-	async fn message(&self, ctx: Context, msg: Message) {
-		if  msg.author.id != UserId(1032387638633693265) {
-			msg.channel_id.say(&ctx.http, &msg.content).await.unwrap();
-		}
-	}
+    async fn guild_member_addition(&self, ctx: Context, member: Member) {
+        const PIPE_BOMB: &str = "https://media.tenor.com/4WvbjPe0B_wAAAAC/heres-pipe.gif";
+        let guild = try_return!(ctx.http.get_guild(member.guild_id.0).await, Ok);
+        // if guild.system_channel_flags.contains(SystemChannelFlags::SUPPRESS_JOIN_NOTIFICATIONS) { return }
+        if let Some(welcome_channel) = guild.system_channel_id {
+            welcome_channel.send_message(&ctx.http, |msg|
+                msg.content(member.mention()).embed(|emb| emb.image(PIPE_BOMB))
+            ).await.ok();
+        }
+    }
+
+    async fn reaction_add(&self, ctx: Context, reaction: Reaction) {
+        const STAR_CHANNEL: u64 = 1050924693626036334;
+        const THRESHOLD: u64 = 5;
+
+        if !reaction.emoji.unicode_eq("⭐") { return };
+        let starred = try_return!(reaction.message(&ctx.http).await, Ok);
+        let rea = try_return!(starred.reactions.into_iter().find(|msg| msg.reaction_type == reaction.emoji));
+        if rea.count < THRESHOLD { return };
+        ChannelId(STAR_CHANNEL).send_message(&ctx.http, |msg| msg.embed(
+            |emb| { emb
+                .author(|author| {
+                    author.name(&starred.author.name);
+                    let avatar = try_return!(starred.author.avatar_url(), Some, author);
+                    author.icon_url(avatar)
+                })
+            })).await.ok();
+    }
 }
+
+#[command]
+async fn bubble(ctx: &Context, msg: &Message, args: Args) -> CommandResult {
+    msg.channel_id.say(&ctx.http, "Pepega").await?;
+    Ok(())
+}
+
+#[group]
+#[commands(bubble)]
+struct General;
 
 #[tokio::main]
 async fn main() {
     dotenv::dotenv().ok(); // Charger les variables environement à partir du .env
     let token = std::env::var("DISCORD_TOKEN").expect("DISCORD_TOKEN missing from env");
 
-    //let framework = StandardFramework::new()
-        // .configure(|c| c.prefix("!p")); // Changer le prefixe en "!p"
-    
+    let framework = StandardFramework::new()
+        .configure(|c| c.prefix("!"))
+        // The `#[group]` (and similarly, `#[command]`) macro generates static instances
+        // containing any options you gave it. For instance, the group `name` and its `commands`.
+        // Their identifiers, names you can use to refer to these instances in code, are an
+        // all-uppercased version of the `name` with a `_GROUP` suffix appended at the end.
+        .group(&GENERAL_GROUP);
+
     let mut client = Client::builder(token, GatewayIntents::all())
-        //.framework(framework)
-		.event_handler(Handler)
+        .event_handler(Handler)
+        .framework(framework)
         .await
         .expect("Error creating client");
-    
+
     client.start().await.unwrap();
 }
-
-/*
-#[group]
-#[commands(reply)]
-struct General;
-
-#[command]
-async fn message(&self, ctx: Context, msg: Message/*, mut args: Args*/) -> CommandResult {
-    msg.channel_id.say(&ctx.http, &msg.content).await?;
-	Ok(())
-}
-*/
-/*
-
-const version = "v0.35"; 
-const logo = [
-  "• ▌ ▄ ·.        ▐ ▄  ▄▄▄· ",
-  "·██ ▐███▪▪     •█▌▐█▐█ ▀█ ",
-  "▐█ ▌▐▌▐█· ▄█▀▄ ▐█▐▐▌▄█▀▀█ ",
-  "██ ██▌▐█▌▐█▌.▐▌██▐█▌▐█ ▪▐▌",
-  `▀▀  █▪▀▀▀ ▀█▄▀▪▀▀ █▪ ▀  ▀  ${version}`,
-]; 
-logo.forEach(line => {console.log(line.green)});
-
-discordBot.on('ready', () => {
-    // Start the API when bots ready
-    require('./api/api.js');
-  
-    var dbStats = new CronJob('0 1 * * * *', function() {
-      console.database('Updating new statistics');
-      let guilds = discordBot.guilds.cache.map(guild => guild.name);
-      db.query(`SELECT mora FROM users;`, (error, results, fields) => { 
-        let totalMora = 0;
-        results.forEach(result => totalMora += result.mora)
-        db.query(`INSERT 
-          INTO statistics (servers, total_members, total_commands_executed)
-          VALUES (${guilds.length}, ${module.exports.getTotalMembers()}, ${module.exports.getCommandsRan()})`, (error, results, fields) => { 
-            if (error) console.log(error);
-          }
-        )
-    });
-  
-    }, null, true, 'America/Los_Angeles');
-  
-    dbStats.start();
-  
-    // cleanup channels
-    module.exports.cleanUpAll();
-  
-    // Load commands from ./commands/ folder after bot is ready
-    discordBot.commands = new Discord.Collection();
-    const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-    for (const file of commandFiles) {
-      const command = require(`./commands/${file}`);
-      discordBot.commands.set(command.name, command);
-      // Log each component loaded
-      // console.info(`Loaded component: ${command.name.toString().cyan}`); 
-    }
-  
-    let guilds = discordBot.guilds.cache.map(guild => guild.name);
-    console.info(`Stargazing ${guilds.length.toString().cyan} servers!`);
-    discordBot.user.setActivity("!mona help", {
-      type: "LISTENING"
-    }); 
-    console.info(`Informing ${twitterChannelsJSON["channels"].length.toString().cyan} channels!`);
-    console.info(`Starcatching ${starcatchChannelsJSON["channels"].length.toString().cyan} channels!`);
-  });
-*/
