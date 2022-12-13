@@ -1,6 +1,6 @@
 import discord
 import os
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,7 +10,6 @@ DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 # Create a new Discord client
 intents = discord.Intents.all()
 client = discord.Client(command_prefix='!', intents=intents)
-TARGET_CHANNEL_ID = 1050924693626036334
 
 
 @client.event
@@ -18,14 +17,23 @@ async def on_message(message):
     if message.content.startswith("!gif"):
         # Check if message has an image
         if message.attachments:
-            # Open the image file and convert it to a GIF
+            # Open the image file
             image = Image.open(message.attachments[0])
+            # Convert to GIF
             image = image.convert("RGB").convert("P", palette=Image.ADAPTIVE)
-            image.save("converted.gif", "GIF")
-
+            # Add overlay
+            draw = ImageDraw.Draw(image)
+            font = ImageFont.truetype("arial.ttf", 36)
+            draw.text((10, 10), "NIGGERS", font=font, fill=(255, 0, 0))
+            image.save("converted.gif")
             # Send the converted GIF back
             await message.channel.send(file=discord.File("converted.gif"))
 
+@client.event
+async def on_member_join(member):
+    target_channel = client.get_channel(1041162913529995267)
+    await target_channel.send(member.mention)
+    await target_channel.send("https://media.tenor.com/4WvbjPe0B_wAAAAC/heres-pipe.gif")
 
 @client.event
 async def on_raw_reaction_add(payload):
@@ -33,7 +41,7 @@ async def on_raw_reaction_add(payload):
     if payload.emoji.name == '⭐':
         # Fetch the message and channel objects from the payload
         message = await client.get_channel(payload.channel_id).fetch_message(payload.message_id)
-        target_channel = client.get_channel(TARGET_CHANNEL_ID)
+        target_channel = client.get_channel(1050924693626036334)
 
         # Create an embed object with the message content and link to message
         embed = discord.Embed(description=message.content)
