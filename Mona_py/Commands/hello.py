@@ -1,6 +1,9 @@
 import discord
 import datetime
-from Mona_py.bot import voicelinesJSON
+import json
+
+with open("voicelines.json") as f:
+    voicelinesJSON = json.load(f)
 
 
 async def hello(message: discord.Message):
@@ -18,4 +21,4 @@ async def hello(message: discord.Message):
     if current_time >= 22 or current_time < 6:
         response = voicelinesJSON["hello"]["timeRelativeResponses"]["response4"]
     
-    await message.channel.send(f"{message.author} {response}")
+    await message.channel.send(f"{message.author.mention} {response}")

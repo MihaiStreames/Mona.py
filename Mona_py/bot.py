@@ -1,11 +1,8 @@
 import discord
 import os
-import json
-from Mona_py.Commands.hello import hello
+from Mona_py.Commands import hello, chat
 from dotenv import load_dotenv
 
-with open(os.path.join("../voicelines.json"), "r") as f:
-    voicelinesJSON = json.load(f)
 
 load_dotenv()
 
@@ -32,9 +29,9 @@ async def on_message(message):
         command = command_words[0][1:]
 
         if command == "hello":
-            await hello(message)
-        elif command == "goodbye":
-            await message.channel.send("Goodbye!")
+            await hello.hello(message)
+        elif command == "chat":
+            await chat.chat(message)
         else:
             await message.channel.send(f"Unknown command: {command}")
 
