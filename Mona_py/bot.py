@@ -1,17 +1,60 @@
 import discord
 import os
-from PIL import Image, ImageDraw, ImageFont
+import json
+from Mona_py.Commands.hello import hello
 from dotenv import load_dotenv
+
+with open(os.path.join("../voicelines.json"), "r") as f:
+    voicelinesJSON = json.load(f)
 
 load_dotenv()
 
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
-# Create a new Discord client
+# create the bot
 intents = discord.Intents.all()
-client = discord.Client(command_prefix='!', intents=intents)
+client = discord.Client(intents=intents)
 
 
+@client.event
+async def on_ready():
+    print(f"{client.user.name} is ready!")
+
+
+@client.event
+async def on_message(message):
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('!'):
+        command_words = message.content.split()
+        command = command_words[0][1:]
+
+        if command == "hello":
+            await hello(message)
+        elif command == "goodbye":
+            await message.channel.send("Goodbye!")
+        else:
+            await message.channel.send(f"Unknown command: {command}")
+
+
+@client.event
+async def on_member_join(member):
+    welcome_channel = client.get_channel(1041162913529995267)
+    await send_welcome_message(welcome_channel, member)
+
+
+async def send_welcome_message(channel, member):
+    message = member.mention
+    message += "\nhttps://media.tenor.com/4WvbjPe0B_wAAAAC/heres-pipe.gif"
+    await channel.send(message)
+
+
+# run the bot
+client.run(DISCORD_TOKEN)
+
+'''
 @client.event
 async def on_message(message):
     if message.content.startswith("!gif"):
@@ -26,12 +69,7 @@ async def on_message(message):
             image.save("converted.gif")
             
             await message.channel.send(file=discord.File("converted.gif"))
-
-@client.event
-async def on_member_join(member):
-    target_channel = client.get_channel(1041162913529995267)
-    await target_channel.send(member.mention)
-    await target_channel.send("https://media.tenor.com/4WvbjPe0B_wAAAAC/heres-pipe.gif")
+            
 
 @client.event
 async def on_raw_reaction_add(payload):
@@ -54,6 +92,7 @@ async def on_raw_reaction_add(payload):
 
         await target_channel.send(embed=embed)
 
+
 @client.event
 async def on_message(message):
     if message.content == "!reaction":
@@ -69,6 +108,7 @@ async def on_message(message):
         if role not in user.roles:
             await user.add_roles(role)
 
+
 @client.event
 async def on_raw_reaction_remove(payload):
     message = await client.get_channel(payload.channel_id).fetch_message(payload.message_id)
@@ -78,6 +118,4 @@ async def on_raw_reaction_remove(payload):
         user = message.guild.get_member(payload.user_id)
 
         await user.remove_roles(role)
-
-# Start the Discord client
-client.run(DISCORD_TOKEN)
+'''
