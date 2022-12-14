@@ -1,0 +1,114 @@
+{
+    "swords": [
+        {
+            "type": "sword",
+            "name": "Aquila Favonia",
+            "price": "110745",
+            "emoji": "",
+            "damage": "1153"
+        },
+        {
+            "type": "sword",
+            "name": "Prototype Rancour",
+            "price": "88650",
+            "emoji": "",
+            "damage": "989"
+        },
+        {
+            "type": "sword",
+            "name": "Skyward Sword",
+            "price": "80545",
+            "emoji": "",
+            "damage": "834" 
+        },
+        {
+            "type": "sword",
+            "name": "Blackcliff Longsword",
+            "price": "70625",
+            "emoji": "",
+            "damage": "766"
+        },
+        {
+            "type": "sword",
+            "name": "Royal Longsword",
+            "price": "67600",
+            "emoji": "",
+            "damage": "735"
+        },
+        {
+            "type": "sword",
+            "name": "Lions Roar",
+            "price": "50150",
+            "emoji": "",
+            "damage": "567"
+        },
+        {
+            "type": "sword",
+            "name": "The Flute",
+            "price": "39450",
+            "emoji": "",
+            "damage": "534"
+        },
+        {
+            "type": "sword",
+            "name": "Favonius Sword",
+            "price": "35350",
+            "emoji": "",
+            "damage": "482"
+        },
+        {
+            "type": "sword",
+            "name": "Traveler's Handy Sword",
+            "price": "32600",
+            "emoji": "",
+            "damage": "460"
+        },
+        {
+            "type": "sword",
+            "name": "Sacrificial Sword",
+            "price": "31050",
+            "emoji": "",
+            "damage": "442"
+        },
+        {
+            "type": "sword",
+            "name": "Dark Iron Sword",
+            "price": "11800",
+            "emoji": "",
+            "damage": "282"
+        },
+        {
+            "type": "sword",
+            "name": "Sword of Descension",
+            "price": "11425",
+            "emoji": "",
+            "damage": "263"
+        },
+        {
+            "type": "sword",
+            "name": "Skyrider Sword",
+            "price": "11450",
+            "emoji": "",
+            "damage": "253"
+        },
+        {
+            "type": "sword",
+            "name": "Silver Sword",
+            "price": "10750",
+            "emoji": "",
+            "damage": "220"
+        },
+        {
+            "type": "sword",
+            "name": "Dull Blade",
+            "price": "133742069e+10-S3X",
+            "emoji": "",
+            "damage": "168"
+        }
+    ],
+    "claymores": {},
+    "bows": {},
+    "polearms": {},
+    "catalysts": {}
+}
+

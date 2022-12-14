@@ -1,0 +1,620 @@
+{
+    "tips": [
+	{
+		"category":"Abode",
+		"content":"A realm created by the adepti. Abodes have their own rules and logic, and are in some ways no different from pocket dimensions."
+	},
+	{
+		"category":"Abyss Order",
+		"content":"An organization made out of non-human monsters. They are the enemies of surface civilization, and thrive in many corners of the world."
+	},
+	{
+		"category":"Abyss Order",
+		"content":"The Abyss Mages that run amok in many places are skilled in the language of the hilichurls, and are able to take control of them for their own uses. This makes them very dangerous indeed."
+	},
+	{
+		"category":"Adventurers' Guild",
+		"content":"The Adventurers' Guild exists to distribute commissions and recruit adventurers, and it has branches all over Teyvat. Their motto is \"Ad astra abyssosque!\""
+	},
+	{
+		"category":"Adventurers' Guild",
+		"content":"An exceptional adventurer will use the Guild-issued Adventurer Handbook to track the monsters and enemies they are hunting. As such, some hunters and warriors also join the Adventurers' Guild in order to obtain Adventurer Handbooks with the latest and greatest information inscribed..."
+	},
+	{
+		"category":"Adventurers' Guild",
+		"content":"The Adventurers' Guild has a public booth in every city. Becoming a legendary adventurer starts with understanding the ins and outs of the services they offer."
+	},
+	{
+		"category":"Amber",
+		"content":"Organic, crystalline formations known as Amber can be found on Mt. Hulao in Jueyun Karst. Who knows what treasures may be found within them?"
+	},
+	{
+		"category":"An Ancient Tree",
+		"content":"Legend tells of an ancient tree whose roots reach every corner of the world..."
+	},
+	{
+		"category":"Anemograna",
+		"content":"Sometimes in the wild you may see a mysterious kind of life form called an Anemogranum. These curious beings will follow travelers around. Gather several Anemograna together to form a wind current."
+	},
+	{
+		"category":"Artifacts",
+		"content":"Five categories of artifacts exist. Each set includes an item of headwear, a flower, a goblet or similar, a timepiece, and a bird's feather."
+	},
+	{
+		"category":"Artifacts",
+		"content":"Artifacts derive power from their original bearers' ambitions and memories. It follows that they must consume other artifacts to increase their power."
+	},
+	{
+		"category":"Artifacts",
+		"content":"Treasures endowed with great power. Equipping several connected artifacts simultaneously increases their power even further."
+	},
+	{
+		"category":"Books",
+		"content":"When you come across tomes worth keeping, they will automatically enter your archive. Through this archive, you can read through the collection of books you've obtained throughout your journey at your leisure - the activity of choice for literary connoisseurs."
+	},
+	{
+		"category":"Character Archive",
+		"content":"You can use the Character Archive to view information on characters who have yet to join your team, yet are brimming with potential all the same..."
+	},
+	{
+		"category":"Character Archive",
+		"content":"You can view information on characters who have already joined the Traveler's party in the Character Archive."
+	},
+	{
+		"category":"City Reputation",
+		"content":"Once you have gained enough Reputation, Hertha will be willing to share rare recipes with you that cannot be acquired anywhere else."
+	},
+	{
+		"category":"City Reputation",
+		"content":"Liyue is the beating heart of commerce and mercantile activity. If you can earn Ms. Yu's trust, perhaps she might grant you access to priceless and otherwise unobtainable recipes..."
+	},
+	{
+		"category":"City Reputation: Bounties",
+		"content":"Dangerous monsters will sometimes appear on the outskirts of Mondstadt. Despite the lack of able hands, the Knights still collect information on such creatures. Once your Reputation reaches a certain level, you can view the list of monster bounties."
+	},
+	{
+		"category":"City Reputation: Bounties",
+		"content":"Perilous creatures will sometimes emerge and menace the outskirts of Liyue. Ms. Yu from the Ministry of Civil Affairs pays attention to rumors of such monsters, recording and investigating each one with care. Once you Reputation reaches a certain level, you will be able to view these monster bounties."
+	},
+	{
+		"category":"City Reputation: Requests",
+		"content":"Despite a manpower shortage, Hertha of the Knights of Favonius will still actively keep her ear to the ground, listening to the trouble of the people of Mondstadt and filing them away for resolution at a later date. Once your Reputation reaches a certain level, you can view Mondstadt's requests. Resolve the troubles of the people proactively, and you will surely win Hertha's respect."
+	},
+	{
+		"category":"City Reputation: Requests",
+		"content":"Meeting the needs of Liyue's people is the sworn duty of the Ministry of Civil Affairs. But there is a limit to just how much people can do, and tasks have been piling up at Ms. Yu's desk. Once you Reputation reaches a certain level, you will gain access to Liyue's requests. Solving people's problems will surely raise your standing with them, right?"
+	},
+	{
+		"category":"Cocogoat",
+		"content":"The legendary adeptibeast."
+	},
+	{
+		"category":"Combat",
+		"content":"A skilled warrior will use the terrain and vantage points against their enemy, plummeting down from the sky to ambush their foes."
+	},
+	{
+		"category":"Combat",
+		"content":"Some characters' Elemental Skills and Bursts apply the element in question to themselves. Be mindful of your surroundings when using these attacks, lest they cause an unwanted elemental reaction..."
+	},
+	{
+		"category":"Combat Talent",
+		"content":"Certain materials can be used to level up a character's Elemental Skill, Elemental Burst, and even Normal Attack."
+	},
+	{
+		"category":"Constellations",
+		"content":"Wherever you go, whatever life throws at you... In Teyvat, the stars in the sky will always have a place for you."
+	},
+	{
+		"category":"Cooking",
+		"content":"Different dishes have different effects, including healing, boosting strength, and replenishing stamina. Food connoisseurs know how to exploit the properties of what they eat."
+	},
+	{
+		"category":"Cooking",
+		"content":"You may discover some rare recipes during your adventures. Learn to cook new dishes by reading recipes in your inventory."
+	},
+	{
+		"category":"Cooking",
+		"content":"Restaurants sell recipes — it's one way to keep their cuisine alive. Learn to cook new dishes by reading recipes in your inventory."
+	},
+	{
+		"category":"Cooking",
+		"content":"Cooking is a key survival skill. Naturally, it must be done with care to obtain the most delicious dishes. But a little dexterity and a keen eye go a long way, too."
+	},
+	{
+		"category":"Cooking",
+		"content":"Good Hunter offers a take-away service for adventurers who often have to eat on the go. They also sell cooking ingredients."
+	},
+	{
+		"category":"Cooking",
+		"content":"Each region of Teyvat has its own cuisine. All you need to sample them is the recipe, the right ingredients, and a little skill."
+	},
+	{
+		"category":"Co-Op Mode",
+		"content":"When challenging a domain, try using Co-Op Mode to find Travelers to fight alongside. Perhaps strength in numbers may help you conquer even the most unconquerable domains."
+	},
+	{
+		"category":"Co-Op Mode",
+		"content":"Be welcoming to Travelers from other worlds, you might make yourself some new friends."
+	},
+	{
+		"category":"Co-Op Mode",
+		"content":"When you get stuck on a difficult Daily Commission that you just can't handle alone, try calling in reinforcements in Co-Op Mode."
+	},
+	{
+		"category":"Co-Op Mode",
+		"content":"It is said that some weapons will even change shape after reaching certain developmental milestones..."
+	},
+	{
+		"category":"Crafting",
+		"content":"A mysterious ancient craft that harnesses the physical properties and fundamental principles of matter. Odds and ends you pick up on your journey can be transformed into more precious substances."
+	},
+	{
+		"category":"Crafting",
+		"content":"As well as making Potions, you can also turn some materials into more precious ones through crafting."
+	},
+	{
+		"category":"Crafting",
+		"content":"With crafting, many materials can be used to create elemental Potions. Potions increase your elemental RES or increase Elemental DMG. A potion here and there might take the edge off when the going gets tough."
+	},
+	{
+		"category":"Daily Commissions",
+		"content":"After you complete the 4 Daily Commissions of the day, don't forget to go to the Adventurers' Guild to claim an extra reward."
+	},
+	{
+		"category":"Dandelions",
+		"content":"Dandelions are native to Mondstadt, the land blessed by the winds. Dandelions were brought here on the wind, and their seeds can be gathered using the power of Anemo."
+	},
+	{
+		"category":"Dangerous Flora",
+		"content":"There are mutated plants in this world that have intelligence and can manipulate the elements. A Cryo Regisvine has been known to keep meat fresh for several centuries, so its strength should not be underestimated..."
+	},
+	{
+		"category":"Dangerous Flora",
+		"content":"There are mutated plants in this world that have intelligence and can manipulate the elements. Whopperflowers are able to use their mimetic flowers to trick their prey..."
+	},
+	{
+		"category":"Destroying Items",
+		"content":"A traveler's bag can only fit so much. If you have too many of any item, you can destroy items to make room. But once something is destroyed, you can't get it back..."
+	},
+	{
+		"category":"Domains",
+		"content":"It is said that glorious civilizations once covered every corner of the land, above and below ground, in days of yore. Those once-glorious civilizations have long perished, and all that remains of them today is the cities and altars they built deep underground."
+	},
+	{
+		"category":"Domains and Elements",
+		"content":"Sometimes, Domains fill with harmful elemental energy that can only be dispelled with elemental reactions. For example, Smoldering Flames deals continuous DMG through Burning."
+	},
+	{
+		"category":"Domains and Elements",
+		"content":"Sometimes, Domains fill with harmful elemental energy that can only be dispelled with elemental reactions. For example, characters assailed by Engulfing Storm continuously lose elemental energy."
+	},
+	{
+		"category":"Dvalin",
+		"content":"The true name of the noble being known as Stormterror. It is the \"Dragon of the East\" of the Four Winds. Once defended Mondstadt from a great catastrophe."
+	},
+	{
+		"category":"Elemental Monuments",
+		"content":"Devices that respond to elemental energy. Some must be activated in a specific order, some may reset after a given time. If you can solve the puzzle, perhaps you will be rewarded..."
+	},
+	{
+		"category":"Elemental Monuments",
+		"content":"Strange devices left by a lost civilization. Anything could happen when you activate them with the right elemental energy."
+	},
+	{
+		"category":"Elemental Nodes",
+		"content":"A trial item that can be found in domains. It provides nearby monsters with Elemental affixes. If you do not adeptly counter these Elemental affixes with Elemental attacks of your own, it can turn a once-easy battle quite a thorny challenge."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Heavy attacks can break the Frozen effect and unfreeze the affected being. The shattering ice deals DMG in the process, however."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Electro meets Hydro, the elemental reaction is Electro-Charged. This somewhat stupefying state deals continuous Electro DMG."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Hydro meets Pyro, Vaporize occurs. When a Pyro or Hydro attack causes this reaction, it deals increased DMG."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Electro meets Pyro, Overloaded occurs. The result is a powerful explosion."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Pyro meets Cryo, Melt occurs. When a Pyro or Cryo attack causes this reaction, it deals increased DMG."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Pyro meets Dendro, Burning occurs. Burning deals continuous Pyro DMG."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Cryo meets Hydro, the elemental reaction is Frozen. Frozen beings cannot move. Make effective use of this fact to conquer the most formidable of opponents with ease."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"When Electro meets Cold , Superconduct occurs. This elemental reaction deals AoE Cryo DMG and decreases DEF."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Using Swirl increases the range of other elements' effects, maximizing the effectiveness of adventurers' and warriors' attacks."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Even the seemingly-inert Geo has its elemental reaction. When it comes into contact with Hydro, Pyro, Cryo, or Electro, Crystallize occurs, producing DMG-dealing elemental shards."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Vaporize amplifies the DMG of the attack that produces it. Hydro attacks receive a greater DMG boost than Pyro attacks."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Melt amplifies the DMG of the attack that produces it. Pyro attacks receive a greater DMG boost than Cryo attacks."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Considering how Electro-Charged works, it's important to be careful when using Electro attacks near bodies of water. That said, this same scenario offers great potential for defeating enemies with ease..."
+	},
+	{
+		"category":"Elemental Reaction",
+		"content":"Considering how Frozen works, it's important to be aware when you get Wet while adventuring or during combat. Getting Frozen is the last thing you want!"
+	},
+	{
+		"category":"Elemental Sigils",
+		"content":"Elemental Sigils of every kind can be found all over Teyvat, where the seven elements flow and converge. They are said to be a sign of the gods' favor."
+	},
+	{
+		"category":"Elemental Sigils",
+		"content":"Anemo Sigils are found throughout Mondstadt. They are often obtained by completing challenges and discovering treasure. You might find someone in the city who offers rare treasures in return for them."
+	},
+	{
+		"category":"Elemental Sigils",
+		"content":"Geo Sigils are found throughout the vast land of Liyue as a reward for finding treasure and completing challenges. You might find someone in Liyue Harbor who offers rare treasures in return for them."
+	},
+	{
+		"category":"Elements",
+		"content":"Seven elements are found in Teyvat: Hydro, Pyro, Cryo, Geo, Anemo, Electro, and Dendro. The interaction between elements produces some weird and wonderful results."
+	},
+	{
+		"category":"Elements",
+		"content":"Dealing elemental DMG generates energy-rich Elemental Particles and Orbs. Collect them to restore energy for characters in your Party."
+	},
+	{
+		"category":"Elements",
+		"content":"The building blocks of this world ans the source of many miraculous things. All sort of things happen when elements interact. Adventurers, travelers, and warriors all use elemental reactions to get things done at a fraction of the effort it might otherwise take."
+	},
+	{
+		"category":"Elite Enemies",
+		"content":"Some extremely powerful elemental creatures lurk around Teyvat. Defeat them all and you can obtain valuable Character Ascension Materials as well as extremely rare artifacts. an eye on their stamina level."
+	},
+	{
+		"category":"Energy",
+		"content":"Hitting an enemy with a Normal or Charged Attack may replenish your character's Energy."
+	},
+	{
+		"category":"Equipment Enhancement",
+		"content":"Higher level weapons and artifacts can provide a lot of experience when used to enhance weapons."
+	},
+	{
+		"category":"Expeditions",
+		"content":"At the Adventurers' Guild, you can dispatch characters on expeditions to earn extra materials while you're off on adventures."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"Occasionally, you might find shrubs contain items dropped by a monster or traveler."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"Experienced adventurers plan their route before scaling a mountain or cliff face. Stopping at suitable points along the way lets you gather your wits and recover stamina."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"The whole world brims with elemental energy, including many plants and ore deposits. Perhaps you can gather them by using the right element."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"The mini-map shows your current position and things in the surrounding area. Anemoculi and other elemental oculi will show up here."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"Exploration is the bread and butter of an adventurer. Solving unknown mysteries, discovering hidden treasures and collecting lost divine Oculi can increase a region's Exploration Progress."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"Adventurers are explorers at heart. If you spot a fragile-looking rock pile on your adventure, try breaking it open to see what treasure it might contain."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"Butterflies are drawn to flower, and fireflies are more easily visible at night. To catch insects, learn their habits. It is said there are even crystalflies attracted to elemental energy."
+	},
+	{
+		"category":"Exploration and Adventure",
+		"content":"Countless treasures are scattered across the land, just waiting to see the light of day once more..."
+	},
+	{
+		"category":"Fatui",
+		"content":"An organization from Snezhnaya that is loyal to the Tsaritsa. Its Harbingers are on the hunt for the Gnoses."
+	},
+	{
+		"category":"Fatui",
+		"content":"A Snezhnayan organization. They seem to possess an incredible level of technology, and are even able to take apart and analyze Ruin Guards."
+	},
+	{
+		"category":"Fatui",
+		"content":"The Northland Bank hails from Snezhnaya, and has branches in many places. When the Fatui operate overseas, they will use funds provided by the Bank, and even use it as their base of operations..."
+	},
+	{
+		"category":"Fatui",
+		"content":"An Snezhnayan organization. Though they often prefer using forceful diplomacy to get their way, they will not hesitate to use force itself either..."
+	},
+	{
+		"category":"Forging",
+		"content":"Liyue is home to a time-honored smithy called Hanfeng's Ironmongers. The craft has been passed down for generations and quality is guaranteed. Your ore and prototypes will be safe in the hands of Master Zhang."
+	},
+	{
+		"category":"Forging",
+		"content":"Wagner might have a bad temper, but he's a master of his craft. Any prototypes or ore you find on your travels will be safe in his hands."
+	},
+	{
+		"category":"Forging",
+		"content":"Look after your weapon, and it will look after you. Blacksmiths can make new weapons, turn prototypes weapons into battle-ready ones, and make refinement materials from raw ore."
+	},
+	{
+		"category":"Geograna",
+		"content":"In the wild, you may come across oddly-shaped crystals in which live Geograna. These curious Geo beings will follow you around. Take one near a certain lamp-shaped object and see what happens..."
+	},
+	{
+		"category":"Gliding License",
+		"content":"One actually has to go through a strict examination and obtain the relevant license before they can use a wind glider."
+	},
+	{
+		"category":"If at First You Don't Succeed...",
+		"content":"If you fall in battle, get up and keep fighting. If you run out of energy, find ways to strengthen yourself. And when you fail, learn from the experience. Onwards and upwards — never give up."
+	},
+	{
+		"category":"If at First You Don't Succeed...",
+		"content":"Never give up hope."
+	},
+	{
+		"category":"Infusion Stones",
+		"content":"There's legend of a strange stone in Liyue infused with incredible elemental energy that even affects nearby monsters with elemental affixes. If you wait too long to destroy these Infusion Stones, the monsters will become more and more dangerous..."
+	},
+	{
+		"category":"Leveling Up",
+		"content":"When a character reaches a certain level, they must Ascend before they can level up further. Sometimes, Ascension confers new Talents."
+	},
+	{
+		"category":"Ley Lines",
+		"content":"A mysterious network that links the whole world together, within which flow the elements. It's said the Ley Lines remember all things that happen in this world, from the surface down to the deepest depths..."
+	},
+	{
+		"category":"Ley Line Blossom",
+		"content":"Blossoms formed from ley line deposits generated from the impeded flow of elemental energy. They appear when adventurers complete certain arduous challenges to rid the area of the source of the elemental malady. Use Original Resin to claim their hidden treasures."
+	},
+	{
+        "category":"Ley Line Blossom",
+        "content":"Flowers that bloom at Ley Line openings. Defeat all opponents in the Ley Line opening challenge and consume Original Resin to obtain a rich bounty."
+	},
+	{
+		"category":"Ley Line Disorder",
+		"content":"All Domains are said to be constructed on ley lines. The energy surging through them can affect the Domains in unpredictable ways. These effects are known as ley line disorders."
+	},
+	{
+		"category":"Liyue",
+		"content":"Liyue is dotted with ancient ruins. One of these is the monumental Guizhong Ballista, which was constructed using highly advanced engineering skills."
+	},
+	{
+		"category":"Liyue",
+		"content":"A bountiful harbor that lies in the East. Mountains stand tall and proud alongside the stone forest, that together with the open plains and flowing rivers make up Liyue's breathtaking landscape."
+	},
+	{
+		"category":"Liyue Harbor",
+		"content":"A harbor city built from the ground up by Rex Lapis, known all over as a wealthy trading hub. \"Where merchants flock and all ships dock, and over the oceans flows its stock.\""
+	},
+	{
+		"category":"Lupical",
+		"content":"In some special circles, this word means \"a fated family.\""
+	},
+	{
+		"category":"Mare Jivari",
+		"content":"An endless plain of ash where the wind does not blow. The dreams of many an experienced adventurer has ended there, and many a traveler has ceased their sojourn on its account."
+	},
+	{
+		"category":"Millelith",
+		"content":"While the Millelith stands guard, evil shall never prevail! Their main duty is to keep the peace in Liyue."
+	},
+	{
+		"category":"Mondstadt",
+		"content":"A city of freedom that lies in the northest. From the mountains to the wide-open plains, the carefree breeze carries the scent of dandelions — a gift from the Anemo God — to an island in the middle of Cider Lake, on which sits the city of Mondstadt."
+	},
+	{
+		"category":"Mondstadt",
+		"content":"A free and joyous city under the jurisdiction of the Knight of Favonius. The city is famed for its wine and songs, which here go hand in hand."
+	},
+	{
+		"category":"Mondstadt",
+		"content":"This land was once home to a god named Decarabian."
+	},
+	{
+		"category":"Mora",
+		"content":"The currency accepted worldwide in Teyvat. None dispute its value and status."
+	},
+	{
+		"category":"Mora",
+		"content":"It is a catalyst of sorts, in that it is a medium for physical transformation. That is why so many things can only be accomplished through the use of Mora."
+	},
+	{
+		"category":"Original Resin",
+		"content":"Original Resin gradually replenishes by absorbing elemental energy from the natural environment. Alternatively, you can replenish it more quickly using a certain variety of highly precious gem."
+	},
+	{
+		"category":"Original Resin",
+		"content":"Revitalizes Petrified Trees (Domains) and Ley Line Blossoms (open world)."
+	},
+	{
+		"category":"Paimon",
+		"content":"The best travel companion ever!"
+	},
+	{
+		"category":"Petrified Trees",
+		"content":"It is said that the roots of all the Petrified Trees in the world are intertwined at the deepest, most hidden place in the earth, and that the pattern the root system makes defines the ley lines of the world."
+	},
+	{
+		"category":"Qixing",
+		"content":"The noble few who govern the land of Liyue."
+	},
+	{
+		"category":"Quests",
+		"content":"In the Quest Menu, press the small button on the right side of a quest entry to toggle its pin on the map."
+	},
+	{
+		"category":"Quests",
+		"content":"Sometimes in quests, characters will be busy with other matters. In the Quest Menu, you can view which characters are occupied during each quest."
+	},
+	{
+		"category":"Quests",
+		"content":"When you are navigating to a quest objective, you can press the indicator below the mini-map to show a path that guides the way."
+	},
+	{
+		"category":"Quests",
+		"content":"Use Navigate in the Quest Menu to help get your bearings and find your way to objectives."
+	},
+	{
+		"category":"Riding the Wind",
+		"content":"Upcurrents can help you reach high-up places."
+	},
+	{
+		"category":"Ruins Torches",
+		"content":"They say the insignia on the platform sealing the chest hints at the direction of the ruins torch. Some adventurers utilize this clue when hunting for treasure."
+	},
+	{
+		"category":"Seelie",
+		"content":"Now you see them, now you don't. Once a mighty race that lived to guide mankind, now the most Seelie offer is a little treasure to willing followers."
+	},
+	{
+		"category":"Seelie",
+		"content":"Seelie all want to return to their Seelie Gardens. If you see the remains of a small statue like this, you can use Elemental Sight to find traces of the Seelie..."
+	},
+	{
+		"category":"Settings",
+		"content":"You can adjust the camera sensitivity in Settings."
+	},
+	{
+		"category":"Shrines of Depths",
+		"content":"Precious offerings are sealed within these ancient shrines erected on Teyvat's surface. Keys to the Shrines of Depths can be found in some Domains."
+	},
+	{
+		"category":"Slimes",
+		"content":"Lowly life forms of minimal intelligence, made from condensed elemental energy. But ignore them for too long, and they just might become a bigger problem."
+	},
+	{
+		"category":"Sourcing Items",
+		"content":"You can read up on an item's source so you know how to find more of it in the future. Knowledge is power!"
+	},
+	{
+		"category":"Spiral Abyss",
+		"content":"Food and potions cannot be consumed within the Spiral Abyss. Those seeking to conquer the immense Abyssal Moon Spire and Abyss Corridor must rely on their strength and courage alone."
+	},
+	{
+		"category":"Spiral Abyss",
+		"content":"New treasures appear in the Abyssal Moon Spire twice each month. They say this cycle is eerily similar to that of a moon in some distant universe."
+	},
+	{
+		"category":"Spiral Abyss",
+		"content":"To conquer Divergence challenges, you must split your party into two groups. Legends say that ancient kings and priests worked together to climb a tower touching the sky. What could they have been seeking...?"
+	},
+	{
+		"category":"Spiral Abyss",
+		"content":"It's divided into the Abyss Corridor and the Abyssal Moon Spire. They say that the former connects to a crumbled palace of an ancient world, while the latter leads to a spiraling tower in the dark unknown, though no-one can claim they've seen the end of either."
+	},
+	{
+		"category":"Spiral Abyss",
+		"content":"Elemental Nodes may appear during challenges and make monsters stronger. If you really want to conquer this dark inverted tower, you must be able to conquer the elements."
+	},
+	{
+		"category":"Spiral Abyss",
+		"content":"Blessing of the Abyssal Moon changes each month. The Spiral Abyss contains two kinds of blessings, this one belonging to the night sky of a distant land."
+	},
+	{
+		"category":"Stamina",
+		"content":"Prudent adventurers know to keep an eye on their stamina level."
+	},
+	{
+		"category":"Stamina",
+		"content":"Swimming and climbing deplete stamina. What happens when stamina runs out at the wrong time? Only one way to find out..."
+	},
+	{
+		"category":"Stamina",
+		"content":"Stamina is crucial during combat, not just while exploring. Dodging and using charged attacks (melee/catalyst) both deplete stamina."
+	},
+	{
+		"category":"Statues' Lost Oculi",
+		"content":"The statues will bless those who return elemental oculi of the right type to them."
+	},
+	{
+		"category":"Statues' Lost Oculi",
+		"content":"Statues of The Seven once watched over the land with elemental oculi. They have since been pecked out and carried to far-flung corners of the world. Only the intrepid adventurer may retrieve them."
+	},
+	{
+		"category":"Taking Photos",
+		"content":"Keep mementos of the sights and experiences of your adventure. When taking a photo, you can change your character's pose."
+	},
+	{
+		"category":"Teleport Waypoints",
+		"content":"Places you can teleport to. The easiest way to get around in Teyvat."
+	},
+	{
+		"category":"Time",
+		"content":"Time flies by when contemplating life, the universe, and everything..."
+	},
+	{
+		"category":"Time",
+		"content":"Just as the elements of the world count seven, so do the days of the week. Some large creatures of Teyvat will regain their strength every Monday at (Player's Time), including the legendary guardian of Wolvendom..."
+	},
+	{
+		"category":"Treasure Hoarders",
+		"content":"An infamous transnational organization identifiable by their Ravenwing motif. Their members are a rag-tag bunch of ruffians with precious little in their hands beyond an obsession with treasure."
+	},
+	{
+		"category":"Weapons",
+		"content":"Some weapons in this world have turned into prototypes over the course of their long existence. Only a skilled smith can restore them to their former glory."
+	},
+	{
+		"category":"Weapons",
+		"content":"When a weapon reaches a certain level, it must Ascend before it can be enhanced further. Ascension makes your weapon more powerful."
+	},
+	{
+		"category":"Weapons",
+		"content":"Weapons of the same type can be combined using the Refine function. Refinement increases your weapon's strength."
+	},
+	{
+		"category":"Weapons",
+		"content":"For adventurers and warriors, a weapon is one's most trusted companion. Enhance your weapon with refinement ore and it, like you, will go from strength to strength."
+	},
+	{
+		"category":"Weapons",
+		"content":"It is said that some weapons will even change shape after reaching certain developmental milestones..."
+	},
+	{
+		"category":"Weather",
+		"content":"Experienced travelers know to prepare for any weather conditions. Weather conditions may impact your travel plans and combat strategy. An outstanding adventurer knows how to exploit or defy the weather conditions at every turn."
+	},
+	{
+		"category":"Wind Gliders",
+		"content":"There are all sorts of wind gliders in the world. Try putting on a new pair of wings to take to the skies and soar across mountains, plains, and rivers — you might find the experience quite refreshing."
+	},
+	{
+		"category":"Wolvendom",
+		"content":"A revered and ancient spirit holds court in this land. It is the realm of the wolves, and thus was its name derived."
+	},
+	{
+		"category":"World Quests",
+		"content":"On your adventure, you will encounter people who seem to be in dire need of help. Talk to these people, and they'll often have something for you to assist with."
+	},
+	{
+		"category":"World Quests",
+		"content":"The world is full of all sorts of big opportunities and daunting challenges, as well as small errands... Travelers eager to lend a helping hand to others may come across valuable rewards for their troubles."
+	}
+	]
+}
