@@ -1,3 +1,4 @@
 .env
 Mona.rs/target
 /.idea/
+/Mona_py/test.py
