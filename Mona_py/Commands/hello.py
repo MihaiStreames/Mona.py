@@ -1,4 +1,4 @@
-import discord
+import nextcord
 import datetime
 import json
 
@@ -6,7 +6,7 @@ with open("../voicelines.json") as f:
     voicelinesJSON = json.load(f)
 
 
-async def hello(message: discord.Message):
+async def hello(message: nextcord.Message):
     print(f"!hello in {message.guild.name}")
 
     current_time = datetime.datetime.now().hour
