@@ -2,4 +2,5 @@
 Mona.rs/target
 /.idea/
 /Mona_py/test.py
-/Images/
+Mona_py/Images/
+*.pyc
