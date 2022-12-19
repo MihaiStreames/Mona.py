@@ -59,20 +59,17 @@ async def on_raw_reaction_add(payload):
         message = await client.get_channel(payload.channel_id).fetch_message(payload.message_id)
         target_channel = client.get_channel(1050924693626036334)
 
-        embed = nextcord.Embed()
-        embed.description = f"{message.content}\n [Click to jump to message!]({message.jump_url})"
+        embed = nextcord.Embed(
+            color=nextcord.Color.blue(),
+            description=f"{message.content}\n\n [**Click to jump to message!**]({message.jump_url})"
+        )
         embed.set_author(name=message.author.name+"#"+str(message.author.discriminator), icon_url=message.author.avatar)
         embed.add_field(name="Sent at:", value=message.created_at.date(), inline=False)
-        embed.color = nextcord.Color.blue()
 
-        if message.attachments:
-            attachment = message.attachments[0]
+        if message.content.startswith('https://') or message.attachments:
 
-            if attachment.height:  # Image
-                embed.set_image(url=attachment.url)
-
-            elif attachment.size:  # Video
-                embed.add_field(name="Video", value=f"[Click here]({attachment.url}) to view the video.")
+            attachment = message.content
+            embed.set_image(url=attachment)
 
         await target_channel.send(embed=embed)
 
