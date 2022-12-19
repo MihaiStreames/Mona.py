@@ -1,6 +1,6 @@
 import nextcord
 import os
-from Mona_py.Commands import hello, chat
+from Mona_py.Commands import hello, chat, help
 from dotenv import load_dotenv
 
 
@@ -16,6 +16,7 @@ client = nextcord.Client(intents=intents)
 @client.event
 async def on_ready():
     print(f"{client.user.name} is ready!")
+    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
 
 @client.event
@@ -24,16 +25,20 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!'):
+    if message.content.startswith('!mona'):
         command_words = message.content.split()
-        command = command_words[0][1:]
+        command = command_words[1][:]
 
         if command == "hello":
-            await hello.hello(message)
+            await hello.hello(message, client)
         elif command == "chat":
             await chat.chat(message, client)
+        elif command == "reaction" or command == "ask" or command == "starcatch":
+            await message.channel.send("That command is being worked on !!!")
+        elif command == "help":
+            await help.help(message, client)
         else:
-            await message.channel.send(f"Unknown command: {command}")
+            await message.channel.send(f"I don't know *{command}* >_< !!!")
 
 
 @client.event

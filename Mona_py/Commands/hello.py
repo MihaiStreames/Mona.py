@@ -6,8 +6,8 @@ with open("../voicelines.json") as f:
     voicelinesJSON = json.load(f)
 
 
-async def hello(message: nextcord.Message):
-    print(f"!hello in {message.guild.name}")
+async def hello(message: nextcord.Message, client):
+    print(f"!mona hello in {message.guild.name}")
 
     current_time = datetime.datetime.now().hour
     response = ""
