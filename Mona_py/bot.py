@@ -64,12 +64,12 @@ async def on_raw_reaction_add(payload):
             description=f"{message.content}\n\n [**Click to jump to message!**]({message.jump_url})"
         )
         embed.set_author(name=message.author.name+"#"+str(message.author.discriminator), icon_url=message.author.avatar)
-        embed.add_field(name="Sent at:", value=message.created_at.date(), inline=False)
 
         if message.content.startswith('https://') or message.attachments:
-
             attachment = message.content
             embed.set_image(url=attachment)
+
+        embed.add_field(name="Sent at:", value=message.created_at.date(), inline=False)
 
         await target_channel.send(embed=embed)
 

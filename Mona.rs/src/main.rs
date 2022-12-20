@@ -1,8 +1,9 @@
-use serenity::framework::standard::macros::*;
-use serenity::framework::standard::*;
+use serenity::framework::StandardFramework;
 use serenity::model::prelude::*;
 use serenity::async_trait;
 use serenity::prelude::*;
+
+pub mod commands;
 
 macro_rules! try_return {
     ($try: expr, $kind: ident, $ret: expr) => {
@@ -56,16 +57,6 @@ impl EventHandler for Handler {
     }
 }
 
-#[command]
-async fn bubble(ctx: &Context, msg: &Message, args: Args) -> CommandResult {
-    msg.channel_id.say(&ctx.http, "Pepega").await?;
-    Ok(())
-}
-
-#[group]
-#[commands(bubble)]
-struct General;
-
 #[tokio::main]
 async fn main() {
     dotenv::dotenv().ok(); // Charger les variables environement à partir du .env
@@ -77,7 +68,7 @@ async fn main() {
         // containing any options you gave it. For instance, the group `name` and its `commands`.
         // Their identifiers, names you can use to refer to these instances in code, are an
         // all-uppercased version of the `name` with a `_GROUP` suffix appended at the end.
-        .group(&GENERAL_GROUP);
+        .group(&commands::fun::FUN_GROUP);
 
     let mut client = Client::builder(token, GatewayIntents::all())
         .event_handler(Handler)
