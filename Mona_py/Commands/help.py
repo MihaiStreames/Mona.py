@@ -20,14 +20,15 @@ async def help(message: nextcord.Message, client):
         value="\n".join([
             "!mona image",
             "!mona chat",
-            "!mona ask (sentence) (WIP)"
+            "!mona ascii",
+            "!mona ask (sentence) `(WIP)`"
         ])
     )
     embed.add_field(
         name="Admin/Setup Commands",
         value="\n".join([
-            "!mona reaction (WIP)",
-            "!mona starcatch (WIP)"
+            "!mona reaction (star/emoji) (setup) `(WIP)`",
+            "!mona starcatch `(WIP)`"
         ])
     )
 
