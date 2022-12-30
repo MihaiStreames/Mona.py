@@ -1,5 +1,4 @@
 import nextcord
-from Mona_py.json_db import channelsJSON
 from Mona_py.logger import log
 
 

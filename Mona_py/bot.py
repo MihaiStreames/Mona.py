@@ -3,7 +3,7 @@ import os
 from logger import log
 from Mona_py.Commands import hello, chat, help, reaction, ascii
 from dotenv import load_dotenv
-
+from Mona_py.json_db import DBInstance
 
 load_dotenv()
 
@@ -29,6 +29,10 @@ async def on_ready():
     log("start", f"{client.user.name} is ready!")
     await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
+#@client.event
+#async def on_disconnect(): DBInstance.save()
+@client.event
+async def on_close(): DBInstance.save()
 
 @client.event
 async def on_message(message):
