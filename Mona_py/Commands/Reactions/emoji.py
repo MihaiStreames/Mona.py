@@ -1,4 +1,5 @@
 import nextcord
+from Mona_py.json_db import JSONDB
 from Mona_py.logger import log
 
 
@@ -13,7 +14,6 @@ async def emoji(message: nextcord.Message, client):
 
     else:
         channel = client.get_channel(int(channel_response.content))
-        log("command", f"Logged emoji channel {channel.id} in {message.guild.name}")
 
     await channel.send(f"{message.author.mention} Which emojis do you want me to associate with which roles? ("
                        f"Enter each association in the format 'emoji: role', or 'done' when finished)")
@@ -34,6 +34,7 @@ async def emoji(message: nextcord.Message, client):
     await channel.send('Please send the message you want me to react to with the corresponding emojis:')
 
     user_message = await client.wait_for("message")
+    log("command", f"Logged message {user_message.id} in {message.guild.name}")
 
     for emoji in associations:
         await user_message.add_reaction(emoji)
