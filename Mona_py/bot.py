@@ -23,6 +23,7 @@ commands = {
     "ascii": ascii.ascii
 }
 
+
 @client.event
 async def on_ready():
     log("start", f"{client.user.name} is ready!")
