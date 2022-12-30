@@ -1,4 +1,12 @@
 {
-  "star_channels": "1050924693626036334",
-  "emoji_channels": "1058486530911502366"
+  "__server_id": { },
+
+  "JaguarGamingID": {
+    "star_channels" : ["1050924693626036334"],
+    "emoji_channels": {
+      "__channel_id": ["__roleid"],
+      "1058486530911502366": []
+    }
+  }
+
 }
