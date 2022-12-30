@@ -1,13 +1,11 @@
 import nextcord
 import datetime
-import json
-
-with open("../voicelines.json") as f:
-    voicelinesJSON = json.load(f)
+from Mona_py.logger import log
+from Mona_py.json_opener import voicelinesJSON
 
 
 async def hello(message: nextcord.Message, client):
-    print(f"!mona hello in {message.guild.name}")
+    log("command", f"!mona hello in {message.guild.name}")
 
     current_time = datetime.datetime.now().hour
     response = ""

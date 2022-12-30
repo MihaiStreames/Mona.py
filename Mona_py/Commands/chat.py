@@ -1,14 +1,13 @@
+import asyncio.exceptions
 import math
 import random
 import nextcord
-import json
+from Mona_py.logger import log
+from Mona_py.json_opener import voicelinesJSON
 
-with open("../voicelines.json") as f:
-    voicelinesJSON = json.load(f)
-chatbox = nextcord.File("./Images/Icon_Dialogue_Talk.png", filename="chat.png")
 
 async def chat(message: nextcord.Message, client):
-    print(f"!mona chat in {message.guild.name}")
+    log("command", f"!mona chat in {message.guild.name}")
 
     await message.channel.send(f"{message.author.mention} What do you want to chat about?")
 
@@ -25,12 +24,16 @@ async def chat(message: nextcord.Message, client):
         color=nextcord.Color.blue(),
         description=message.content
     )
-    embed.set_thumbnail(url="attachment://chat.png")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1051774224005607494/1054492121106751598/chat.png")
     embed.add_field(name="Topics", inline=True, value=value_string)
 
-    await message.channel.send(embed=embed, files=[chatbox])
+    await message.channel.send(embed=embed)
 
-    response = await client.wait_for("message", check=lambda m: m.author == message.author, timeout=10000)
+    try:
+        response = await client.wait_for("message", check=lambda m: m.author == message.author, timeout=10000)
+    except asyncio.exceptions.TimeoutError:
+        log("warning", f"Timeout in {message.guild.name}")
+        return
 
     # checks if response is in dict, if yes sends random response between the different available ones
     if response.content.lower() in voicelinesJSON["chat"]:
