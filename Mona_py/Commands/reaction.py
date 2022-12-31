@@ -1,5 +1,4 @@
 import nextcord
-
 from Mona_py.logger import log
 from Mona_py.Commands.Reactions import emoji, star  # not halal
 
