@@ -1,6 +1,7 @@
 import nextcord
 from Mona_py.logger import log
 
+
 async def star(message: nextcord.Message, client):
     await message.channel.send("Which channel do you want me to use for the star reaction system? (Enter the "
                                "channel ID or 'new' to create a new channel)")
@@ -15,7 +16,7 @@ async def star(message: nextcord.Message, client):
         log("command", f"Logged star channel {channel.id} in {message.guild.name}")
 
     @client.event
-    async def star_handler(payload, client):
+    async def on_raw_reaction_add(payload):
         if payload.emoji.name == '⭐':
             message = await client.get_channel(payload.channel_id).fetch_message(payload.message_id)
             target_channel = client.get_channel(channel.id)

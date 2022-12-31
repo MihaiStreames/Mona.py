@@ -6,7 +6,7 @@ class ServerInstance:
         self.id = id
         self.database_ref = database_ref.setdefault(id)
 
-    def star_channel_ids(self): return self.database_ref.setdefault("star_channels")
+    def star_channel(self): return self.database_ref.get("star_channel")
 
     def emoji_channels(self): return self.database_ref.setdefault("emoji_channels")
 
@@ -30,4 +30,4 @@ class JSONDB:
             json.dump(f, self.database, indent=2)
 
 
-DBInstance = JSONDB("../database.json")
+DBInstance = JSONDB("database.json")

@@ -1,5 +1,4 @@
 import nextcord
-from Mona_py.json_db import JSONDB
 from Mona_py.logger import log
 
 
@@ -40,7 +39,7 @@ async def emoji(message: nextcord.Message, client):
         await user_message.add_reaction(emoji)
 
     @client.event
-    async def emoji_handler(payload, client):
+    async def on_raw_reaction_add(payload):
         if payload.member == client.user:
             return
 

@@ -3,7 +3,7 @@ import math
 import random
 import nextcord
 from Mona_py.logger import log
-from Mona_py.json_db import voicelinesJSON
+from Mona_py.json_opener import voicelinesJSON
 
 
 async def chat(message: nextcord.Message, client):

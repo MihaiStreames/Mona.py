@@ -13,4 +13,5 @@ async def reaction(message: nextcord.Message, client):
     log("command", f"!mona reaction {message.guild.name}")
     reaction_type = message.content.split()[3]
 
-    if reaction_type in commands: commands[reaction_type](message, client)
+    if reaction_type in commands:
+        await commands[reaction_type](message, client)
