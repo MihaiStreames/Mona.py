@@ -1,5 +1,6 @@
 import nextcord
 from Mona_py.logger import log
+from DB.main import JSONDB
 
 
 async def star(message: nextcord.Message, client):
@@ -9,6 +10,7 @@ async def star(message: nextcord.Message, client):
 
     if channel_response.content.lower() == "new":
         channel = await message.guild.create_text_channel('⭐')
+
         log("command", f"New star channel {channel.id} in {message.guild.name}")
 
     else:

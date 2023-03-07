@@ -2,11 +2,13 @@ import nextcord
 import os
 from logger import log
 from Mona_py.Commands import hello, chat, help, reaction, ascii  # cancer
+from DB.main import JSONDB
 from dotenv import load_dotenv
 
 load_dotenv()
 
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+db = JSONDB("../DB/database.json")
 
 # create the bot
 intents = nextcord.Intents.all()
@@ -25,6 +27,8 @@ commands = {
 
 @client.event
 async def on_ready():
+    if db:
+        log("start", "DB loaded!")
     log("start", f"{client.user.name} is ready!")
     await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
