@@ -1,8 +1,11 @@
 import nextcord
 import os
-from logger import log
-from Mona_py.Commands import hello, chat, help, reaction, ascii  # cancer
+import datetime
+
+from Commands import hello, chat, reaction, help, ascii, epic_games
 from DB.main import JSONDB
+from nextcord.ext import tasks
+from logger import log
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,11 +28,32 @@ commands = {
 }
 
 
+@tasks.loop(hours=24)
+async def daily_free_games_check():
+    log("start", "Checking for free games at " + str(datetime.datetime.now()))
+    games = epic_games.check_epic_games(db)
+    await send_announcement(1188834401732280390, games, db)
+
+
+async def send_announcement(channel_id, games, db):
+    channel = client.get_channel(channel_id)
+
+    for game in games:
+        embed = nextcord.Embed(title=f'FREE GAME! {game["title"]}', color=0x60f923, description=game["description"])
+        embed.set_image(url=game["image_url"])
+        await channel.send(embed=embed)
+        db.add_announced_game(game['id'])
+
+
 @client.event
 async def on_ready():
     if db:
         log("start", "DB loaded!")
+
     log("start", f"{client.user.name} is ready!")
+    daily_free_games_check.start()
+
+    log("start", "Daily free games check started!")
     await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
 
@@ -61,5 +85,5 @@ async def send_welcome_message(channel, member):
     await channel.send(message)
 
 
-# run the bot
+# Run the bot
 client.run(DISCORD_TOKEN)

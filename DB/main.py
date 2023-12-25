@@ -23,6 +23,13 @@ class JSONDB:
 
     def get_server(self, id): return ServerInstance(id, self.database)
 
+    def get_announced_games(self): return self.database.setdefault('announced_games', [])
+
+    def add_announced_game(self, game_id):
+        if game_id not in self.get_announced_games():
+            self.database['announced_games'].append(game_id)
+            self.save()
+
     def save(self): self.save_in(self.database_file)
 
     def save_in(self, file):

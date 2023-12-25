@@ -7,3 +7,4 @@ Mona.rs/love-11.4-win64
 Mona.rs/rigger/j4c
 *.pyc
 *.gif
+.venv
