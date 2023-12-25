@@ -1,6 +1,5 @@
 import nextcord
 import os
-import datetime
 
 from Commands import hello, chat, reaction, help, ascii, epic_games
 from DB.main import JSONDB
@@ -13,7 +12,7 @@ load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 db = JSONDB("../DB/database.json")
 
-# create the bot
+# Create the bot
 intents = nextcord.Intents.all()
 client = nextcord.Client(intents=intents)
 
@@ -30,7 +29,6 @@ commands = {
 
 @tasks.loop(hours=24)
 async def daily_free_games_check():
-    log("start", "Checking for free games at " + str(datetime.datetime.now()))
     games = epic_games.check_epic_games(db)
     await send_announcement(1188834401732280390, games, db)
 
@@ -39,7 +37,7 @@ async def send_announcement(channel_id, games, db):
     channel = client.get_channel(channel_id)
 
     for game in games:
-        embed = nextcord.Embed(title=f'FREE GAME! {game["title"]}', color=0x60f923, description=game["description"])
+        embed = nextcord.Embed(title=f'New Free Game in Epic Store', color=0x60f923, description=game["description"])
         embed.set_image(url=game["image_url"])
         await channel.send(embed=embed)
         db.add_announced_game(game['id'])
@@ -51,9 +49,10 @@ async def on_ready():
         log("start", "DB loaded!")
 
     log("start", f"{client.user.name} is ready!")
-    daily_free_games_check.start()
+    
+    if daily_free_games_check.start():
+        log("start", "Daily free games check started!")
 
-    log("start", "Daily free games check started!")
     await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
 

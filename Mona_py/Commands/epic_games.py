@@ -27,7 +27,7 @@ def check_epic_games(db):
                     'image_url': game['keyImages'][0]['url'] if game['keyImages'][0]['type'] == 'VaultClosed' else game['keyImages'][1]['url']
                 })
 
-        log("info", f"Checked Epic Games Store, found {len(free_games)} free games.")
+        log("info", f"Checked Epic Games Store, found {len(free_games)} free game(s).")
         return free_games
 
     except Exception as e:
