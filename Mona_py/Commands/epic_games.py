@@ -1,7 +1,7 @@
 import requests
 from Mona_py.logger import log
 
-api_url = "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?country=AR"
+api_url = "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?country=BE"
 
 
 def check_epic_games(db):
@@ -14,17 +14,18 @@ def check_epic_games(db):
         announced_games = db.get_announced_games()
 
         for game in store_games:
-            game_id = game['id']
-            if game_id in announced_games:
+            product_slug = game['productSlug'] if 'productSlug' in game else None
+            if product_slug in announced_games:
                 continue  # Skip already announced games
 
             price_info = game['price']['totalPrice']
             if price_info['discountPrice'] == 0:
+                image_url = next((img['url'] for img in game['keyImages'] if img['type'] == 'DieselStoreFrontWide'), None)
                 free_games.append({
-                    'id': game_id,
+                    'slug': product_slug,
                     'title': game['title'],
                     'description': game['description'],
-                    'image_url': game['keyImages'][0]['url'] if game['keyImages'][0]['type'] == 'VaultClosed' else game['keyImages'][1]['url']
+                    'image_url': image_url
                 })
 
         log("info", f"Checked Epic Games Store, found {len(free_games)} free game(s).")

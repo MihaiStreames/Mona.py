@@ -21,7 +21,8 @@ async def help(message: nextcord.Message, client):
             "!mona image",
             "!mona chat",
             "!mona ascii",
-            "!mona ask (sentence) `(WIP)`"
+            "!mona ask (sentence) `(WIP)`",
+            "!mona epicgames"
         ])
     )
     embed.add_field(

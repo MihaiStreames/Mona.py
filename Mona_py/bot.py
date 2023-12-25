@@ -1,5 +1,6 @@
 import nextcord
 import os
+import datetime
 
 from Commands import hello, chat, reaction, help, ascii, epic_games
 from DB.main import JSONDB
@@ -19,8 +20,9 @@ client = nextcord.Client(intents=intents)
 commands = {
     "hello": hello.hello,
     "chat": chat.chat,
-    "ask": lambda message, client: message.channel.send("That command is being worked on !!!"),
-    "starcatch": lambda message, client: message.channel.send("That command is being worked on !!!"),
+    "epicgames": lambda message, client: message.channel.send("This command doesn't do anything if typed, but it is used to check the Epic Games Store for free games every day."),
+    "ask": lambda message, client: message.channel.send("This command is being worked on !!!"),
+    "starcatch": lambda message, client: message.channel.send("This command is being worked on !!!"),
     "reaction": reaction.reaction,
     "help": help.help,
     "ascii": ascii.ascii
@@ -29,8 +31,10 @@ commands = {
 
 @tasks.loop(hours=24)
 async def daily_free_games_check():
-    games = epic_games.check_epic_games(db)
-    await send_announcement(1188834401732280390, games, db)
+    now = datetime.datetime.now()
+    if now.hour == 17:
+        games = epic_games.check_epic_games(db)
+        await send_announcement(1188834401732280390, games, db)
 
 
 async def send_announcement(channel_id, games, db):
@@ -40,7 +44,7 @@ async def send_announcement(channel_id, games, db):
         embed = nextcord.Embed(title=f'New Free Game in Epic Store', color=0x60f923, description=game["description"])
         embed.set_image(url=game["image_url"])
         await channel.send(embed=embed)
-        db.add_announced_game(game['id'])
+        db.add_announced_game(game["slug"])
 
 
 @client.event
@@ -51,14 +55,14 @@ async def on_ready():
     log("start", f"{client.user.name} is ready!")
     
     if daily_free_games_check.start():
-        log("start", "Daily free games check started!")
+        log("start", "Daily free game started!")
 
-    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
+    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name="!mona (.py)"))
 
 
 @client.event
 async def on_message(message):
-    # we do not want the bot to reply to itself
+    # We do not want the bot to reply to itself
     if message.author == client.user:
         return
 
