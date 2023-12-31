@@ -29,10 +29,12 @@ commands = {
 }
 
 
-@tasks.loop(hours=24)
-async def daily_free_games_check():
+@tasks.loop(hours=1)
+async def free_games_check():
     now = datetime.datetime.now()
+
     if now.hour == 17:
+        log("info", "Performing daily free game(s) check!")
         games = epic_games.check_epic_games(db)
         await send_announcement(1188834401732280390, games, db)
 
@@ -51,13 +53,13 @@ async def send_announcement(channel_id, games, db):
 async def on_ready():
     if db:
         log("start", "DB loaded!")
+    else:
+        log("error", "Critical error: DB not loaded!")
+        exit(1)
 
     log("start", f"{client.user.name} is ready!")
-    
-    if daily_free_games_check.start():
-        log("start", "Daily free game started!")
-
-    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name="!mona (.py)"))
+    free_games_check.start()
+    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
 
 @client.event
