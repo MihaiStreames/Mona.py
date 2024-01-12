@@ -1,10 +1,10 @@
 import nextcord
+from nextcord.ext import commands, tasks
 import os
 import datetime
 
 from Commands import hello, chat, reaction, help, ascii, epic_games
 from DB.main import JSONDB
-from nextcord.ext import tasks
 from logger import log
 from dotenv import load_dotenv
 
@@ -13,21 +13,47 @@ load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 db = JSONDB("../DB/database.json")
 
-# Create the bot
+### JSONDB ###
+
+def update_global_commands():
+    global_commands = {
+        'fun': ['chat', 'ascii', 'hello', 'ask'],
+        'admin': ['reaction', 'starcatch']
+    }
+
+    for category, commands in global_commands.items():
+        for command in commands:
+            db.add_global_command(category, command)
+
+### -------- ###
+
 intents = nextcord.Intents.all()
-client = nextcord.Client(intents=intents)
+bot = commands.Bot(intents=intents)
 
-commands = {
-    "hello": hello.hello,
-    "chat": chat.chat,
-    "epicgames": lambda message, client: message.channel.send("This command doesn't do anything if typed, but it is used to check the Epic Games Store for free games every day."),
-    "ask": lambda message, client: message.channel.send("This command is being worked on !!!"),
-    "starcatch": lambda message, client: message.channel.send("This command is being worked on !!!"),
-    "reaction": reaction.reaction,
-    "help": help.help,
-    "ascii": ascii.ascii
-}
+### Commands ###
 
+@bot.slash_command(name="hello", description="Get a greeting from Mona!")
+async def hello_slash(interaction: nextcord.Interaction):
+    await hello.hello(interaction, bot)
+
+
+@bot.slash_command(name="chat", description="Chat with Mona!")
+async def chat_slash(interaction: nextcord.Interaction):
+    await chat.chat(interaction, bot)
+
+
+@bot.slash_command(name="help", description="Get help and command information")
+async def help_slash(interaction: nextcord.Interaction):
+    await help.help(interaction, db.get_global_commands())
+
+
+@bot.slash_command(name="ascii", description="Convert an image to ASCII art")
+async def ascii_slash(interaction: nextcord.Interaction, attachment: nextcord.Attachment):
+    await ascii.ascii(interaction, attachment)
+
+### -------- ###
+
+### Tasks ###
 
 @tasks.loop(hours=1)
 async def free_games_check():
@@ -40,55 +66,51 @@ async def free_games_check():
 
 
 async def send_announcement(channel_id, games, db):
-    channel = client.get_channel(channel_id)
+    channel = bot.get_channel(channel_id)
 
     for game in games:
-        embed = nextcord.Embed(title=f'New Free Game in Epic Store', color=0x60f923, description=game["description"])
-        embed.set_image(url=game["image_url"])
+        # Construct the Epic Store URL
+        epic_store_url = f"https://store.epicgames.com/en-US/p/{game['slug']}"
+
+        embed_title = f"New Free Game in Epic Store!"
+        embed_description = f"**{game['title']}**\n{game['description']}"
+        embed = nextcord.Embed(title=embed_title, url=epic_store_url, color=nextcord.Color.blue(), description=embed_description)
+
+        if game["image_url"]:
+            embed.set_image(url=game["image_url"])
+
         await channel.send(embed=embed)
         db.add_announced_game(game["slug"])
 
+### -------- ###
 
-@client.event
+### Events ###
+
+@bot.event
 async def on_ready():
     if db:
+        update_global_commands()
         log("start", "DB loaded!")
     else:
         log("error", "Critical error: DB not loaded!")
         exit(1)
 
-    log("start", f"{client.user.name} is ready!")
+    log("start", f"{bot.user.name} is ready!")
     free_games_check.start()
-    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
+    await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
 
 
-@client.event
-async def on_message(message):
-    # We do not want the bot to reply to itself
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('!mona'):
-        command_words = message.content.split()
-        command = command_words[1][:]
-
-        if command in commands:
-            await commands[command](message, client)
-        else:
-            await message.channel.send(f"I don't know *{command}* >_< !!!")
-
-
-@client.event
+@bot.event
 async def on_member_join(member):
-    welcome_channel = client.get_channel(1041162913529995267)
+    welcome_channel = bot.get_channel(1041162913529995267)
     await send_welcome_message(welcome_channel, member)
 
 
 async def send_welcome_message(channel, member):
-    message = member.mention
-    message += "\nhttps://media.tenor.com/4WvbjPe0B_wAAAAC/heres-pipe.gif"
-    await channel.send(message)
+    await channel.send(f"{member.mention} Welcome!")
+    await channel.send("https://media.tenor.com/4WvbjPe0B_wAAAAC/heres-pipe.gif")
 
+### -------- ###
 
 # Run the bot
-client.run(DISCORD_TOKEN)
+bot.run(DISCORD_TOKEN)

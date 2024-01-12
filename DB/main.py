@@ -13,15 +13,21 @@ class ServerInstance:
 
 class JSONDB:
 
-    def load_from(self, file):
-        with open(file) as f:
-            self.database = json.load(f)
-
     def __init__(self, database_file):
         self.database_file = database_file
         self.load_from(self.database_file)
 
+    def load_from(self, file):
+        with open(file) as f:
+            self.database = json.load(f)
+
     def get_server(self, id): return ServerInstance(id, self.database)
+
+    def save(self): self.save_in(self.database_file)
+
+    def save_in(self, file):
+        with open(file, 'w') as f:
+            json.dump(self.database, f, indent=2)
 
     def get_announced_games(self): return self.database.setdefault('announced_games', [])
 
@@ -30,8 +36,9 @@ class JSONDB:
             self.database['announced_games'].append(game_id)
             self.save()
 
-    def save(self): self.save_in(self.database_file)
+    def get_global_commands(self): return self.database.setdefault('global_commands', {'fun': [], 'admin': []})
 
-    def save_in(self, file):
-        with open(file, 'w') as f:
-            json.dump(self.database, f, indent=2)
+    def add_global_command(self, category, command):
+        if command not in self.get_global_commands()[category]:
+            self.get_global_commands()[category].append(command)
+            self.save()

@@ -20,6 +20,18 @@
     "20-minutes-till-dawn-be3305",
     "a-plague-tale-innocence",
     "marvels-guardians-of-the-galaxy",
-    null
-  ]
+    "sail-forth-51847e"
+  ],
+  "global_commands": {
+    "fun": [
+      "chat",
+      "ascii",
+      "hello",
+      "ask"
+    ],
+    "admin": [
+      "reaction",
+      "starcatch"
+    ]
+  }
 }

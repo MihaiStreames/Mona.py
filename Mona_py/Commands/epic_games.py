@@ -14,13 +14,16 @@ def check_epic_games(db):
         announced_games = db.get_announced_games()
 
         for game in store_games:
-            product_slug = game['productSlug'] if 'productSlug' in game else None
-            if product_slug in announced_games:
-                continue  # Skip already announced games
+            # Extract productSlug from catalogNs mappings
+            catalog_ns_mappings = game.get('catalogNs', {}).get('mappings', [])
+            product_slug = next((m['pageSlug'] for m in catalog_ns_mappings if m.get('pageType') == 'productHome'), None)
+
+            if not product_slug or product_slug in announced_games:
+                continue  # Skip null or already announced games
 
             price_info = game['price']['totalPrice']
             if price_info['discountPrice'] == 0:
-                image_url = next((img['url'] for img in game['keyImages'] if img['type'] == 'DieselStoreFrontWide'), None)
+                image_url = next((img['url'] for img in game['keyImages'] if img['type'] == 'OfferImageWide'), None)
                 free_games.append({
                     'slug': product_slug,
                     'title': game['title'],

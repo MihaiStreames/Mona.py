@@ -6,7 +6,7 @@ from io import BytesIO
 
 
 def image_to_ascii(image_file, width, height):
-    image = Image.open(BytesIO(image_file)).convert("L")  # grayscale
+    image = Image.open(BytesIO(image_file)).convert("L")  # Grayscale
     image = image.resize((width, height))
 
     pixels = image.getdata()
@@ -23,23 +23,18 @@ def image_to_ascii(image_file, width, height):
     return ascii_art
 
 
-async def ascii(message: nextcord.Message, client):
-    log("command", f"!mona ascii in {message.guild.name}")
-    # check if text is added
-    if len(message.content) > len("!mona ascii "):
-        await message.channel.send("Text support hasn't been added yet </3")
-        return
-    # check if image is added
-    elif len(message.attachments) == 0:
-        await message.channel.send("You need to attach an image -.-")
+async def ascii(interaction: nextcord.Interaction, attachment: nextcord.Attachment):
+    log("command", f"Slash command /ascii used in {interaction.guild.name}")
+
+    if not attachment:
+        await interaction.response.send_message("You need to attach an image.")
         return
 
-    attachment = message.attachments[0]
     image_data = await attachment.read()
 
     try:
         ascii_art = image_to_ascii(image_data, 60, 25)
-    except ValueError as e:  # wrong image format
+    except ValueError as e:  # Wrong image format
         await log("warning", f"Error: {e}")
         return
 
@@ -48,4 +43,4 @@ async def ascii(message: nextcord.Message, client):
         description=f"```\n{ascii_art}\n```"
     )
 
-    await message.channel.send(embed=embed)
+    await interaction.response.send_message(embed=embed)
