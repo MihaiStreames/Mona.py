@@ -45,4 +45,4 @@ class JSONDB:
         return self.database.setdefault('announced_games', [])
 
     def get_global_commands(self):
-        return self.database.setdefault('global_commands', {'fun': [], 'admin': []})
+        return self.database.setdefault('commands', {'fun': [], 'admin': []})

@@ -1,0 +1,15 @@
+{
+    "equippedWeapon": "Dull Blade",
+    "weapons": [
+        {
+            "type": "sword",
+            "name": "Dull Blade"
+        }
+    ],
+    "stars": {
+        "comets": 0,
+        "stars": 0,
+        "meteorites": 0
+    },
+    "mora": 0
+}

@@ -1,0 +1,734 @@
+{
+    "items": [
+        {
+            "consumable": false,
+            "craftable": false,
+            "buyable": false,
+            "type": "star",
+            "name": "Comet",
+            "emoji": "784784685401767946"
+        },
+        {
+            "consumable": false,
+            "craftable": false,
+            "buyable": false,
+            "type": "star", 
+            "name": "Star",
+            "emoji": "784784685783449640"
+        },
+        {
+            "consumable": false,
+            "craftable": false,
+            "buyable": false,
+            "type": "star",
+            "name": "Meteorite",
+            "emoji": "784784685766017064"
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Aquila Favonia",
+            "price": 122550,
+            "emoji": "784765471635144755",
+            "damage": 1460
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Prototype Rancour",
+            "price": 89655,
+            "emoji": "784768735943720980",
+            "damage": 1365
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Skyward Sword",
+            "price": 66025,
+            "emoji": "784758337304526868",
+            "damage": 1270 
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Blackcliff Longsword",
+            "price": 46855,
+            "emoji": "784766914991751218",
+            "damage": 1175
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Royal Longsword",
+            "price": 38650,
+            "emoji": "784767395066544128",
+            "damage": 1080
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Lions Roar",
+            "price": 28635,
+            "emoji": "784769002718101524",
+            "damage": 985
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "The Flute",
+            "price": 22545,
+            "emoji": "784768202478845983",
+            "damage": 890
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Favonius Sword",
+            "price": 20210,
+            "emoji": "784767547684814878",
+            "damage": 795
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Travelers Handy Sword",
+            "price": 18650,
+            "emoji": "784768967750713354",
+            "damage": 700
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Sacrificial Sword",
+            "price": 17750,
+            "emoji": "784769002823614485",
+            "damage": 605
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Dark Iron Sword",
+            "price": 10750,
+            "emoji": "784769000520941578",
+            "damage": 510
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Sword of Descension",
+            "price": 6525,
+            "emoji": "784773969290985492",
+            "damage": 415
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Skyrider Sword",
+            "price": 6550,
+            "emoji": "784768933928370187",
+            "damage": 320
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Silver Sword",
+            "price": 6150,
+            "emoji": "784769047362928641",
+            "damage": 225
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "category": "sword",
+            "type": "weapon",
+            "name": "Dull Blade",
+            "price": 133742069,
+            "emoji": "784856325091885087",
+            "damage": 168
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Winged Spear",
+            "price": 465375,
+            "emoji": "787758819718856714",
+            "damage": 2790
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Skyward Spine",
+            "price": 423607,
+            "emoji": "787759200083247124",
+            "damage": 2695
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Vortex Vanquisher",
+            "price": 384607,
+            "emoji": "787759347542523935",
+            "damage": 2600
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Crescent Pike",
+            "price": 349643,
+            "emoji": "787760598279520318",
+            "damage": 2505
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Blackcliff Pole",
+            "price": 317858,
+            "emoji": "787760702910890014",
+            "damage": 2410
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Dragons Bane",
+            "price": 288962,
+            "emoji": "787760760981291088",
+            "damage": 2315
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Deathmatch",
+            "price": 262693,
+            "emoji": "787760945946034207",
+            "damage": 2200
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Prototype Grudge",
+            "price": 238812,
+            "emoji": "787760946059280405",
+            "damage": 2125
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Favonius Lance",
+            "price": 217102,
+            "emoji": "789879951625027604",
+            "damage": 2030
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Royal Spear",
+            "price": 197366,
+            "emoji": "789879951687024730",
+            "damage": 1935
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Black Tassel",
+            "price": 179424,
+            "emoji": "789879951725035560",
+            "damage": 1840
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "White Tassel",
+            "price": 163113,
+            "emoji": "789879951565389856",
+            "damage": 1745
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Halberd",
+            "price": 148285,
+            "emoji": "789879951112667177",
+            "damage": 1650
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "polearm",
+            "name": "Iron Point",
+            "price": 134805,
+            "emoji": "789879951440478219",
+            "damage": 1555
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Wolfs Gravestone",
+            "price": 1943968,
+            "emoji": "789888060136620052",
+            "damage": 4215
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "The Unforged",
+            "price": 1767244,
+            "emoji": "789888060455649310",
+            "damage": 4120
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Skyward Pride",
+            "price": 1606586,
+            "emoji": "789888059936210996",
+            "damage": 4025
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "The Bell",
+            "price": 1460533,
+            "emoji": "789888060081963008",
+            "damage": 3930
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Sacrificial Greatsword",
+            "price": 1327758,
+            "emoji": "789888060136751134",
+            "damage": 3835
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Blackcliff Slasher",
+            "price": 1207053,
+            "emoji": "789888060094545980",
+            "damage": 3740
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Serpent Spine",
+            "price": 1097321,
+            "emoji": "789888060162048071",
+            "damage": 3645
+        },
+
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Whiteblind",
+            "price": 997565,
+            "emoji": "789888060317630504",
+            "damage": 3550
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Royal Greatsword",
+            "price": 906878,
+            "emoji": "789888060028354560",
+            "damage": 3455
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Rainslasher",
+            "price": 824435,
+            "emoji": "789888060447129610",
+            "damage": 3360
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Prototype Aminus",
+            "price": 749487,
+            "emoji": "789888059692810241",
+            "damage": 3265
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Favonius Greatsword",
+            "price": 681352,
+            "emoji": "789888059965571093",
+            "damage": 3170
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Skyrider Greatsword",
+            "price": 619411,
+            "emoji": "789908945040179240",
+            "damage": 3075
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "White Iron Greatsword",
+            "price": 563101,
+            "emoji": "789888059654668309",
+            "damage": 2980
+        },
+        {
+            "consumable": false,
+            "buyable": true,
+            "type": "weapon",
+            "category": "claymore",
+            "name": "Waster Greatsword",
+            "price": 511910,
+            "emoji": "789888059939749938",
+            "damage": 2885
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Windwheel Aster",
+            "type": "ingredient",
+            "emoji": "789222277258280991"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Violetgrass",
+            "type": "ingredient",
+            "emoji": "789222277018550323"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Wolfhook",
+            "type": "ingredient",
+            "emoji": "789222276935057469"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Cecilia",
+            "type": "ingredient",
+            "emoji": "789222276867293265"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Calla Lily",
+            "type": "ingredient",
+            "emoji": "789222277039259660"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Qingxin",
+            "type": "ingredient",
+            "emoji": "789222276993253377"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Silk Flower",
+            "type": "ingredient",
+            "emoji": "789222277295374347"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Lamp Grass",
+            "type": "ingredient",
+            "emoji": "789222277291573328"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Vayuda Turquoise",
+            "type": "material",
+            "emoji": "787874028404080650"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Shivada Jade",
+            "type": "material",
+            "emoji": "787874027720802325"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Vajrada Amethyst",
+            "type": "material",
+            "emoji": "787063595955126272"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Prithiva Topaz",
+            "type": "material",
+            "emoji": "787874027510431745"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Varunada Lazurite",
+            "type": "material",
+            "emoji": "787874027661295636"
+        },
+        {
+            "consumable": false,
+            "buyable": false,
+            "name": "Agnidus Agate",
+            "type": "material",
+            "emoji": "787874027565744138"
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/785856318086578176.png",
+            "buyable": true,
+            "buff": "ATK",
+            "type": "food",
+            "name": "Adeptus Temptation",
+            "price": 3185,
+            "emoji": "785856318086578176",
+            "atk_percentage": 12,
+            "duration": 240
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/785856317830332416.png",
+            "buyable": true,
+            "buff": "ATK",
+            "type": "food",
+            "name": "Prize Catch",
+            "price": 2550,
+            "emoji": "785856317830332416",
+            "atk_percentage": 10,
+            "duration": 240
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/785856316920954930.png",
+            "buyable": true,
+            "buff": "ATK",
+            "type": "food",
+            "name": "Grilled Fish",
+            "price": 1300,
+            "emoji": "785856316920954930",
+            "atk_percentage": 7,
+            "duration": 480
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/785856186468532264.png",
+            "buyable": true,
+            "buff": "ATK",
+            "type": "food",
+            "name": "Sweet Madame",
+            "price": 1275,
+            "emoji": "785856186468532264",
+            "atk_percentage": 8,
+            "duration": 240
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/785856318010556436.png",
+            "buyable": true,
+            "buff": "ATK",
+            "type": "food",
+            "name": "Almond Tofu",
+            "price": 1075,
+            "emoji": "785856318010556436",
+            "atk_percentage": 6,
+            "duration": 480
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787054720946274304.png",
+            "buff": "ATK",
+            "price": "1250",
+            "buyable": true,
+            "type": "potion",
+            "name": "Shocking Essential Oil",
+            "emoji": "787054720946274304",
+            "atk_percentage": 4,
+            "duration": 1800,
+            "craftable": true,
+            "recipe": {
+                "Vajrada Amethyst": 1,
+                "Comet": 5
+            }
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787013743904948294.png",
+            "buff": "ATK",
+            "buyable": false,
+            "type": "potion",
+            "name": "Insulation Potion",
+            "emoji": "787013743904948294",
+            "atk_percentage": 8,
+            "duration": 36000,
+            "craftable": true,
+            "recipe": {
+                "Shocking Essential Oil": 5
+            }
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787058001696522240.png",
+            "buff": "ATK",
+            "buyable": false,
+            "type": "potion",
+            "name": "Electro Stella Fortuna",
+            "emoji": "787058001696522240",
+            "atk_percentage": 16,
+            "duration": 7200,
+            "craftable": true,
+            "recipe": {
+                "Insulation Potion": 3
+            }
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787020834271264828.png",
+            "buyable": true,    
+            "buff": "ATK",
+            "type": "potion",
+            "name": "Windbarrier Potion",
+            "price": 24515,
+            "emoji": "787020834271264828",
+            "atk_percentage": 8,
+            "duration": 7200
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787020832110673971.png",
+            "buyable": true,    
+            "buff": "ATK",
+            "type": "potion",
+            "name": "Heatshield Potion",
+            "price": 24515,
+            "emoji": "787020832110673971",
+            "atk_percentage": 8,
+            "duration": 7200
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787020832895270913.png",
+            "buyable": true,    
+            "buff": "ATK",
+            "type": "potion",
+            "name": "Desiccant Potion",
+            "price": 24515,
+            "emoji": "787020832895270913",
+            "atk_percentage": 8,
+            "duration": 7200
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787020834782052362.png",
+            "buyable": true,    
+            "buff": "ATK",
+            "type": "potion",
+            "name": "Dustproof Potion",
+            "price": 24515,
+            "emoji": "787020834782052362",
+            "atk_percentage": 8,
+            "duration": 7200
+        },
+        {
+            "consumable": true,
+            "icon": "https://cdn.discordapp.com/emojis/787020834153168946.png",
+            "buyable": true,    
+            "buff": "ATK",
+            "type": "potion",
+            "name": "Frostshield Potion",
+            "price": 24515,
+            "emoji": "787020834153168946",
+            "atk_percentage": 8,
+            "duration": 7200
+        }
+    ]
+}

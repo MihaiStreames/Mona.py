@@ -23,16 +23,19 @@
     "sail-forth-51847e",
     "love-65c4d0"
   ],
-  "global_commands": {
+  "commands": {
     "fun": [
       "chat",
       "ascii",
       "hello",
-      "ask"
+      "ask",
+      "autocrop",
+      "tips"
     ],
     "admin": [
       "reaction",
-      "starcatch"
+      "starcatch",
+      "ms"
     ]
   }
 }
