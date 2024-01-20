@@ -15,7 +15,7 @@ db = JSONDB("../DB/database.json")
 
 ### JSONDB ###
 
-def update_global_commands():
+def export_global_commands():
     global_commands = {
         'fun': ['chat', 'ascii', 'hello', 'ask'],
         'admin': ['reaction', 'starcatch']
@@ -23,7 +23,7 @@ def update_global_commands():
 
     for category, commands in global_commands.items():
         for command in commands:
-            db.add_global_command(category, command)
+            db.add(['commands', category], command)
 
 ### -------- ###
 
@@ -80,7 +80,7 @@ async def send_announcement(channel_id, games, db):
             embed.set_image(url=game["image_url"])
 
         await channel.send(embed=embed)
-        db.add_announced_game(game["slug"])
+        db.add(['announced_games'], game["slug"])
 
 ### -------- ###
 
@@ -88,16 +88,19 @@ async def send_announcement(channel_id, games, db):
 
 @bot.event
 async def on_ready():
-    if db:
-        update_global_commands()
-        log("start", "DB loaded!")
-    else:
-        log("error", "Critical error: DB not loaded!")
-        exit(1)
+    try:
+        if db:
+            export_global_commands()
+            log("start", "DB loaded!")
+        else:
+            log("error", "Critical error: DB not loaded!")
+            exit(1)
 
-    log("start", f"{bot.user.name} is ready!")
-    free_games_check.start()
-    await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
+        await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
+        free_games_check.start()
+        log("start", f"{bot.user.name} is ready!")
+    except Exception as e:
+        log("error", f"Error in on_ready: {e}")
 
 
 @bot.event

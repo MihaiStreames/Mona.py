@@ -6,9 +6,11 @@ class ServerInstance:
         self.id = id
         self.database_ref = database_ref.setdefault(id, {})
 
-    def star_channel(self): return self.database_ref.get("star_channel")
+    def star_channel(self):
+        return self.database_ref.get("star_channel")
 
-    def autorole_channel(self): return self.database_ref.setdefault("autorole_channel", {})
+    def autorole_channel(self):
+        return self.database_ref.setdefault("autorole_channel", {})
 
 
 class JSONDB:
@@ -21,24 +23,26 @@ class JSONDB:
         with open(file) as f:
             self.database = json.load(f)
 
-    def get_server(self, id): return ServerInstance(id, self.database)
+    def get_server(self, id):
+        return ServerInstance(id, self.database)
 
-    def save(self): self.save_in(self.database_file)
+    def save(self):
+        self.save_in(self.database_file)
 
     def save_in(self, file):
         with open(file, 'w') as f:
             json.dump(self.database, f, indent=2)
 
-    def get_announced_games(self): return self.database.setdefault('announced_games', [])
-
-    def add_announced_game(self, game_id):
-        if game_id not in self.get_announced_games():
-            self.database['announced_games'].append(game_id)
+    def add(self, path, item):
+        ref = self.database
+        for key in path[:-1]:  # Navigate to the correct location
+            ref = ref.setdefault(key, {})
+        if item not in ref.setdefault(path[-1], []):  # Add item if not present
+            ref[path[-1]].append(item)
             self.save()
 
-    def get_global_commands(self): return self.database.setdefault('global_commands', {'fun': [], 'admin': []})
+    def get_announced_games(self):
+        return self.database.setdefault('announced_games', [])
 
-    def add_global_command(self, category, command):
-        if command not in self.get_global_commands()[category]:
-            self.get_global_commands()[category].append(command)
-            self.save()
+    def get_global_commands(self):
+        return self.database.setdefault('global_commands', {'fun': [], 'admin': []})
