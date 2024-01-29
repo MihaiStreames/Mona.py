@@ -5,6 +5,7 @@ var db = main.db;
 const fs = require('fs'); 
 const itemsJSON = JSON.parse(fs.readFileSync('items.jsonc'));
 
+
 module.exports = {
 	name: 'use',
 	description: 'Lets a user use an item from their inventory',

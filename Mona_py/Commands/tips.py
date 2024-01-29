@@ -1,4 +1,5 @@
 import nextcord
+
 from random import randint
 from Mona_py.logger import log
 from Mona_py.json_opener import tipsJSON

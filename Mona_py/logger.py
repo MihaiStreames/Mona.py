@@ -9,7 +9,6 @@ ansi_codes = {
     "reset": "\33[0m"           # Reset all colors
 }
 
-
 def log(type, message, *args):
     current_time = time.localtime()
     print(f"{ansi_codes[type]}[{time.strftime('%H:%M:%S', current_time)}]{ansi_codes['reset']} {message}", *args)

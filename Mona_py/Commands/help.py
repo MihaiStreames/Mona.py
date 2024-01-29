@@ -1,4 +1,5 @@
 import nextcord
+
 from Mona_py.logger import log
 
 
@@ -8,7 +9,7 @@ async def help(interaction: nextcord.Interaction, commands):
     embed = nextcord.Embed(
         title="Mona's Catalyst",
         color=nextcord.Color.blue(),
-        description="Mona is a versatile Discord bot featuring a variety of slash commands for entertainment, information, and more."
+        description="Mona is back in glory, bringing with her a fully fledged Discord RPG!"
     )
 
     embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1051774224005607494/1054491332040724602/category.png")

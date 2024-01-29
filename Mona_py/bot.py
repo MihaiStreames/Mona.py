@@ -27,7 +27,7 @@ def export_global_commands():
 
 ### -------- ###
 
-intents = nextcord.Intents.all()
+intents = nextcord.Intents.all()  # Must to change to actual intents, not just all of them (dangerous if I ever were to make a super SCARY DANGEROUS function that DELETES AN ENTIRE SERVER)
 bot = commands.Bot(intents=intents)
 
 ### Commands ###
@@ -66,7 +66,7 @@ async def ascii_slash(interaction: nextcord.Interaction, attachment: nextcord.At
 
 @tasks.loop(hours=1)
 async def free_games_check():
-    now = datetime.datetime.now()
+    now = datetime.datetime.now()  # Keep using BE as the API backend country code, but use Mihoyo timezone
 
     if now.hour == 17:
         log("info", "Performing daily free game(s) check!")
@@ -104,7 +104,7 @@ async def on_ready():
             log("error", "Critical error: DB not loaded!")
             exit(1)
 
-        await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.listening, name="!mona (.py)"))
+        await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.playing, name="Starcatch!"))
         free_games_check.start()
         log("start", f"{bot.user.name} is ready!")
     except Exception as e:

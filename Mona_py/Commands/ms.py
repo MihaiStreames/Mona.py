@@ -1,4 +1,5 @@
 import nextcord
+
 from Mona_py.logger import log
 from datetime import datetime
 
@@ -13,7 +14,7 @@ async def ms(interaction: nextcord.Interaction):
     start = datetime.now()
 
     try:
-        message = await interaction.response.send_message("`0ms` Response Time")
+        await interaction.response.send_message("`0ms` Response Time")
         diff = (datetime.now() - start).total_seconds() * 1000  # Convert to milliseconds
         await interaction.edit_original_message(content=f"`{int(diff)}ms` Response Time")
     except Exception as e:

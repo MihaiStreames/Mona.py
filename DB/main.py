@@ -14,8 +14,8 @@ class ServerInstance:
 
 
 class JSONDB:
-
     def __init__(self, database_file):
+        self.database = None
         self.database_file = database_file
         self.load_from(self.database_file)
 

@@ -1,12 +1,15 @@
 import nextcord
 from Mona_py.logger import log
-from Mona_py.Commands.Reactions import emoji, star  # This is so ugly, I know
+from Mona_py.Commands.Types import autorole, starred_messages
+
 
 commands = {
-    "emoji": emoji.emoji,
-    "star": star.star,
+    "emoji": autorole.emoji,
+    "star": starred_messages.star,
 }
 
+## TODO: Make the main reaction command which will setup the channel and so on, which will be watched by the bot
+## (for any new reactions, etc)
 
 async def reaction(message: nextcord.Message, client):
     log("command", f"!mona reaction {message.guild.name}")

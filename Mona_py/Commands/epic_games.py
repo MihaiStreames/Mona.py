@@ -1,8 +1,9 @@
 import requests
+
 from Mona_py.logger import log
 
+# Maybe consider encrypting it (since it's not something public AND the country is plainly there)
 api_url = "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?country=BE"
-
 
 def check_epic_games(db):
     try:
@@ -22,6 +23,7 @@ def check_epic_games(db):
                 continue  # Skip null or already announced games
 
             price_info = game['price']['totalPrice']
+
             if price_info['discountPrice'] == 0:
                 image_url = next((img['url'] for img in game['keyImages'] if img['type'] == 'OfferImageWide'), None)
                 free_games.append({

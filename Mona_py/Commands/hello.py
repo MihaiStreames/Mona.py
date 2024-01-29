@@ -1,5 +1,6 @@
 import nextcord
 import datetime
+
 from Mona_py.logger import log
 from Mona_py.json_opener import voicelinesJSON
 
@@ -7,7 +8,7 @@ from Mona_py.json_opener import voicelinesJSON
 async def hello(interaction: nextcord.Interaction):
     log("command", f"Slash command /hello used in {interaction.guild.name}")
 
-    current_time = datetime.datetime.now().hour
+    current_time = datetime.datetime.now().hour # Change to Mihoyo timezone
     response = ""
 
     if 6 <= current_time < 12:
