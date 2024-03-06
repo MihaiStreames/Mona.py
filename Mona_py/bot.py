@@ -1,9 +1,12 @@
 import nextcord
+from nextcord import SlashOption
 from nextcord.ext import commands, tasks
+
 import os
 import datetime
+import pytz
 
-from Commands import hello, chat, autocrop, help, ascii, epic_games, ms, tips
+from Commands import hello, chat, autocrop, help, ascii, epic_games, ms, tips, friends
 from DB.main import JSONDB
 from logger import log
 from dotenv import load_dotenv
@@ -17,7 +20,7 @@ db = JSONDB("../DB/database.json")
 
 def export_global_commands():
     global_commands = {
-        'fun': ['chat', 'ascii', 'hello', 'ask', 'autocrop', 'tips'],
+        'fun': ['chat', 'ascii', 'hello', 'ask', 'friends', 'autocrop', 'tips'],
         'admin': ['reaction', 'starcatch', 'ms']
     }
 
@@ -29,12 +32,17 @@ def export_global_commands():
 
 intents = nextcord.Intents.all()  # Must to change to actual intents, not just all of them (dangerous if I ever were to make a super SCARY DANGEROUS function that DELETES AN ENTIRE SERVER)
 bot = commands.Bot(intents=intents)
+shanghai_tz = pytz.timezone('Asia/Shanghai')
 
 ### Commands ###
 
 @bot.slash_command(name="hello", description="Get a greeting from Mona!")
 async def hello_slash(interaction: nextcord.Interaction):
-    await hello.hello(interaction)
+    await hello.hello(interaction, shanghai_tz)
+
+@bot.slash_command(name="friends", description="What mona thinks about her friends")
+async def friends_slash(interaction: nextcord.Interaction, character_name: str = SlashOption(description="Name of the Genshin character", required=True)):
+    await friends.friends(interaction, character_name)
 
 @bot.slash_command(name="tips", description="Gives you a random tip from Genshin Impact")
 async def tips_slash(interaction: nextcord.Interaction):
@@ -66,9 +74,10 @@ async def ascii_slash(interaction: nextcord.Interaction, attachment: nextcord.At
 
 @tasks.loop(hours=1)
 async def free_games_check():
-    now = datetime.datetime.now()  # Keep using BE as the API backend country code, but use Mihoyo timezone
+    # Amazing
+    current_time = datetime.datetime.now(shanghai_tz)
 
-    if now.hour == 17:
+    if current_time.hour == 22:
         log("info", "Performing daily free game(s) check!")
         games = epic_games.check_epic_games(db)
         await send_announcement(1188834401732280390, games, db)
@@ -112,7 +121,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    welcome_channel = bot.get_channel(1041162913529995267)
+    welcome_channel = bot.get_channel(1214855230035071037)
     await send_welcome_message(welcome_channel, member)
 
 async def send_welcome_message(channel, member):

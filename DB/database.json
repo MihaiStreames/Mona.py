@@ -25,7 +25,10 @@
     "infinifactory-ec9686",
     "doors-paradox-5896c7",
     "doki-doki-literature-club-plus",
-    "lost-castle-abb2e2"
+    "lost-castle-abb2e2",
+    "dakar-desert-rally",
+    "super-meat-boy-forever",
+    "aerial-knights-never-yield"
   ],
   "commands": {
     "fun": [
@@ -34,7 +37,8 @@
       "hello",
       "ask",
       "autocrop",
-      "tips"
+      "tips",
+      "friends"
     ],
     "admin": [
       "reaction",
