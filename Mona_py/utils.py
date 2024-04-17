@@ -1,5 +1,15 @@
 import time
 
+from datetime import datetime, timezone
+
+
+def iso_to_unix(date_string):
+    dt = datetime.fromisoformat(date_string)
+    dt = dt.astimezone(timezone.utc)
+    unix_time = int(dt.timestamp())
+
+    return unix_time
+
 ansi_codes = {
     "warning": "\33[41;30m",    # Red background, black text
     "start": "\33[105;30m",     # Magenta background, black text

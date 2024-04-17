@@ -1,7 +1,7 @@
 import nextcord
 import datetime
 
-from Mona_py.logger import log
+from Mona_py.utils import log
 from Mona_py.json_opener import voicelinesJSON
 
 

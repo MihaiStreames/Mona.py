@@ -8,7 +8,7 @@ import pytz
 
 from Commands import hello, chat, autocrop, help, ascii, epic_games, ms, tips, friends
 from DB.main import JSONDB
-from logger import log
+from utils import log, iso_to_unix
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -77,27 +77,44 @@ async def free_games_check():
     # Amazing
     current_time = datetime.datetime.now(shanghai_tz)
 
-    if current_time.hour == 22:
+    if current_time.hour:
         log("info", "Performing daily free game(s) check!")
-        games = epic_games.check_epic_games(db)
-        await send_announcement(1188834401732280390, games, db)
+        games = epic_games.check_epic_games()
+        await send_announcement(1188834401732280390, games, db, current_time)
 
-async def send_announcement(channel_id, games, db):
+async def send_announcement(channel_id, games, db, time):
     channel = bot.get_channel(channel_id)
 
     for game in games:
+        if db.announced_check(game['id'], time):
+            continue
+
+        start_timestamp = iso_to_unix(game['free_from'])
+        end_timestamp = iso_to_unix(game['free_until'])
+
         # Construct the Epic Store URL
         epic_store_url = f"https://store.epicgames.com/en-US/p/{game['slug']}"
 
         embed_title = f"New Free Game in Epic Store!"
         embed_description = f"**{game['title']}**\n{game['description']}"
-        embed = nextcord.Embed(title=embed_title, url=epic_store_url, color=nextcord.Color.blue(), description=embed_description)
 
-        if game["image_url"]:
-            embed.set_image(url=game["image_url"])
+        # Formatting dates for the embed
+        embed = nextcord.Embed(title=embed_title, url=epic_store_url, color=nextcord.Color.blue(), description=embed_description)
+        embed.add_field(name="Free Since:", value=f"<t:{start_timestamp}:R>", inline=True)
+        embed.add_field(name="Free Until:", value=f"<t:{end_timestamp}:R>", inline=True)
+
+        if game['image_url']:
+            embed.set_image(url=game['image_url'])
 
         await channel.send(embed=embed)
-        db.add(['announced_games'], game["slug"])
+
+        db.add(['announced_games'], {
+            'id': game['id'],
+            'slug': game['slug'],  # Just in case
+            'title': game['title'],
+            'free_from': game['free_from'],
+            'free_until': game['free_until']
+        })
 
 ### -------- ###
 
@@ -116,6 +133,7 @@ async def on_ready():
         await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.playing, name="Starcatch!"))
         free_games_check.start()
         log("start", f"{bot.user.name} is ready!")
+
     except Exception as e:
         log("error", f"Error in on_ready: {e}")
 

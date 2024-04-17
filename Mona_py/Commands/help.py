@@ -1,6 +1,6 @@
 import nextcord
 
-from Mona_py.logger import log
+from Mona_py.utils import log
 
 
 async def help(interaction: nextcord.Interaction, commands):

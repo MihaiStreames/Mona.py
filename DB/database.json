@@ -8,27 +8,13 @@
     }
   },
   "announced_games": [
-    "the-outer-worlds-spacers-choice-edition",
-    "[]",
-    "human-resource-machine",
-    "cursed-to-golf-a6bc22",
-    "cat-quest-8373e0",
-    "snakebird-complete-e6f0ae",
-    "saints-row",
-    "ghostrunner",
-    "escape-academy-bfc2bf",
-    "20-minutes-till-dawn-be3305",
-    "a-plague-tale-innocence",
-    "marvels-guardians-of-the-galaxy",
-    "sail-forth-51847e",
-    "love-65c4d0",
-    "infinifactory-ec9686",
-    "doors-paradox-5896c7",
-    "doki-doki-literature-club-plus",
-    "lost-castle-abb2e2",
-    "dakar-desert-rally",
-    "super-meat-boy-forever",
-    "aerial-knights-never-yield"
+    {
+      "id": "19b650f9a98a45b0bfe07674b51fa7a0",
+      "slug": "ghostrunner",
+      "title": "Ghostrunner",
+      "free_from": "2024-04-11T15:00:00.000Z",
+      "free_until": "2024-04-18T15:00:00.000Z"
+    }
   ],
   "commands": {
     "fun": [
