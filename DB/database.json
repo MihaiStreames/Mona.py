@@ -14,6 +14,13 @@
       "title": "Ghostrunner",
       "free_from": "2024-04-11T15:00:00.000Z",
       "free_until": "2024-04-18T15:00:00.000Z"
+    },
+    {
+      "id": "eba5b90a4eda4234a26259bf2ea8b07a",
+      "slug": "freshly-frosted-c636d0",
+      "title": "Freshly Frosted",
+      "free_from": "2024-06-20T15:00:00.000Z",
+      "free_until": "2024-06-27T15:00:00.000Z"
     }
   ],
   "commands": {

@@ -1,671 +1,961 @@
 {
-  "data": {
-    "Catalog": {
-      "searchStore": {
-        "elements": [
+  "errors":[
+    {
+      "message":"CatalogOffer/offerMappings: Request failed with status code 404",
+      "locations":[
+        {
+          "line":73,
+          "column":17
+        }
+      ],
+      "correlationId":"69a11d44-7e42-47ee-a83d-7414eaaca107",
+      "serviceResponse":"{\"errorMessage\":\"The item or resource being requested could not be found.\",\"errorCode\":\"errors.com.epicgames.not_found\",\"numericErrorCode\":1004,\"errorStatus\":404}",
+      "stack":null,
+      "path":[
+        "Catalog",
+        "searchStore",
+        "elements",
+        3,
+        "offerMappings"
+      ]
+    },
+    {
+      "message":"CatalogNamespace/mappings: Request failed with status code 404",
+      "locations":[
+        {
+          "line":68,
+          "column":19
+        }
+      ],
+      "correlationId":"69a11d44-7e42-47ee-a83d-7414eaaca107",
+      "serviceResponse":"{\"errorMessage\":\"The item or resource being requested could not be found.\",\"errorCode\":\"errors.com.epicgames.not_found\",\"numericErrorCode\":1004,\"errorStatus\":404}",
+      "stack":null,
+      "path":[
+        "Catalog",
+        "searchStore",
+        "elements",
+        3,
+        "catalogNs",
+        "mappings"
+      ]
+    }
+  ],
+  "data":{
+    "Catalog":{
+      "searchStore":{
+        "elements":[
           {
-            "title": "Ghostrunner",
-            "id": "19b650f9a98a45b0bfe07674b51fa7a0",
-            "namespace": "95d0b9561be1464cb43bd029e94cf526",
-            "description": "Ghostrunner offers a unique single-player experience: fast-paced, violent combat, and an original setting that blends science fiction with post-apocalyptic themes. It tells the story of a world that has already ended and its inhabitants who fight to survive.",
-            "effectiveDate": "2020-10-27T15:00:00.000Z",
-            "offerType": "BASE_GAME",
-            "expiryDate": null,
-            "viewableDate": "2020-10-27T15:00:00.000Z",
-            "status": "ACTIVE",
-            "isCodeRedemptionOnly": false,
-            "keyImages": [
+            "title":"Freshly Frosted",
+            "id":"eba5b90a4eda4234a26259bf2ea8b07a",
+            "namespace":"013ef1cdbe5a4408919025207ddb9c99",
+            "description":"Place conveyor belts to solve puzzles in the world's most adorable donut factory!",
+            "effectiveDate":"2022-06-10T07:00:00.000Z",
+            "offerType":"BASE_GAME",
+            "expiryDate":null,
+            "viewableDate":"2022-06-08T05:00:00.000Z",
+            "status":"ACTIVE",
+            "isCodeRedemptionOnly":false,
+            "keyImages":[
               {
-                "type": "OfferImageWide",
-                "url": "https://cdn1.epicgames.com/95d0b9561be1464cb43bd029e94cf526/offer/GR_Epic_Landscape_Offer2560x1440-2560x1440-08987c0c3e1701ea6a7217ed5616922d.jpg"
+                "type":"OfferImageWide",
+                "url":"https://cdn1.epicgames.com/spt-assets/8856ac3296214cc086bc101382ee8ffa/freshly-frosted-offer-1tpl2.jpg"
               },
               {
-                "type": "OfferImageTall",
-                "url": "https://cdn1.epicgames.com/95d0b9561be1464cb43bd029e94cf526/offer/GR_Portrait_Offer_1200x1600-1200x1600-a7811e23904db375486535513d10412f.jpg"
+                "type":"OfferImageTall",
+                "url":"https://cdn1.epicgames.com/spt-assets/8856ac3296214cc086bc101382ee8ffa/download-freshly-frosted-offer-1obif.jpg"
               },
               {
-                "type": "Thumbnail",
-                "url": "https://cdn1.epicgames.com/95d0b9561be1464cb43bd029e94cf526/offer/GR_Portrait_Offer_1200x1600-1200x1600-a7811e23904db375486535513d10412f.jpg"
-              },
-              {
-                "type": "CodeRedemption_340x440",
-                "url": "https://cdn1.epicgames.com/95d0b9561be1464cb43bd029e94cf526/offer/GR_Portrait_Offer_1200x1600-1200x1600-a7811e23904db375486535513d10412f.jpg"
-              },
-              {
-                "type": "DieselStoreFrontWide",
-                "url": "https://cdn1.epicgames.com/95d0b9561be1464cb43bd029e94cf526/offer/GR_Epic_Landscape_Offer2560x1440-2560x1440-08987c0c3e1701ea6a7217ed5616922d.jpg"
-              },
-              {
-                "type": "DieselStoreFrontTall",
-                "url": "https://cdn1.epicgames.com/95d0b9561be1464cb43bd029e94cf526/offer/GR_Portrait_Offer_1200x1600-1200x1600-a7811e23904db375486535513d10412f.jpg"
+                "type":"Thumbnail",
+                "url":"https://cdn1.epicgames.com/spt-assets/8856ac3296214cc086bc101382ee8ffa/download-freshly-frosted-offer-1obif.jpg"
               }
             ],
-            "seller": {
-              "id": "o-cul2z53mrw3bxltv63v68rgd4b3w52",
-              "name": "505 Games"
+            "seller":{
+              "id":"o-e8nkcj362yhcae7jpkvrvxt2tssnls",
+              "name":"The Quantum Astrophysicists Guild"
             },
-            "productSlug": "ghostrunner",
-            "urlSlug": "ghostrunner",
-            "url": null,
-            "items": [
+            "productSlug":null,
+            "urlSlug":"c1cc739eba6a4295947c2de9f5e3d603",
+            "url":null,
+            "items":[
               {
-                "id": "f36085249f784d919993008b89a9c13b",
-                "namespace": "95d0b9561be1464cb43bd029e94cf526"
+                "id":"5049bedd5e9f4cb18b7677023f1c1e5c",
+                "namespace":"013ef1cdbe5a4408919025207ddb9c99"
               }
             ],
-            "customAttributes": [
+            "customAttributes":[
               {
-                "key": "com.epicgames.app.blacklist",
-                "value": "[]"
+                "key":"autoGeneratedPrice",
+                "value":"false"
               },
               {
-                "key": "publisherName",
-                "value": "505 Games"
+                "key":"isManuallySetPCReleaseDate",
+                "value":"false"
               },
               {
-                "key": "developerName",
-                "value": "One More Level and 3D Realms"
-              },
-              {
-                "key": "com.epicgames.app.productSlug",
-                "value": "ghostrunner"
+                "key":"isBlockchainUsed",
+                "value":"false"
               }
             ],
-            "categories": [
+            "categories":[
               {
-                "path": "freegames"
+                "path":"freegames"
               },
               {
-                "path": "games"
+                "path":"games"
               },
               {
-                "path": "games/edition"
+                "path":"games/edition"
               },
               {
-                "path": "games/edition/base"
-              },
-              {
-                "path": "applications"
+                "path":"games/edition/base"
               }
             ],
-            "tags": [
+            "tags":[
               {
-                "id": "1216"
+                "id":"1393"
               },
               {
-                "id": "21122"
+                "id":"1298"
               },
               {
-                "id": "21894"
+                "id":"19847"
               },
               {
-                "id": "21127"
+                "id":"1370"
               },
               {
-                "id": "9547"
+                "id":"9547"
               },
               {
-                "id": "1132"
+                "id":"9549"
               },
               {
-                "id": "15375"
-              },
-              {
-                "id": "21137"
-              },
-              {
-                "id": "21138"
-              },
-              {
-                "id": "21139"
-              },
-              {
-                "id": "21140"
-              },
-              {
-                "id": "21109"
-              },
-              {
-                "id": "21141"
-              },
-              {
-                "id": "1210"
-              },
-              {
-                "id": "1370"
-              },
-              {
-                "id": "21149"
+                "id":"1263"
               }
             ],
-            "catalogNs": {
-              "mappings": [
+            "catalogNs":{
+              "mappings":[
                 {
-                  "pageSlug": "ghostrunner",
-                  "pageType": "productHome"
+                  "pageSlug":"freshly-frosted-c636d0",
+                  "pageType":"productHome"
                 }
               ]
             },
-            "offerMappings": [],
-            "price": {
-              "totalPrice": {
-                "discountPrice": 0,
-                "originalPrice": 2999,
-                "voucherDiscount": 0,
-                "discount": 2999,
-                "currencyCode": "EUR",
-                "currencyInfo": {
-                  "decimals": 2
+            "offerMappings":[
+              {
+                "pageSlug":"freshly-frosted-c636d0",
+                "pageType":"productHome"
+              }
+            ],
+            "price":{
+              "totalPrice":{
+                "discountPrice":0,
+                "originalPrice":799,
+                "voucherDiscount":0,
+                "discount":799,
+                "currencyCode":"EUR",
+                "currencyInfo":{
+                  "decimals":2
                 },
-                "fmtPrice": {
-                  "originalPrice": "€29.99",
-                  "discountPrice": "0",
-                  "intermediatePrice": "0"
+                "fmtPrice":{
+                  "originalPrice":"€7.99",
+                  "discountPrice":"0",
+                  "intermediatePrice":"0"
                 }
               },
-              "lineOffers": [
+              "lineOffers":[
                 {
-                  "appliedRules": [
+                  "appliedRules":[
                     {
-                      "id": "a7a8eddfaa5b4e08aab8d725a80a6060",
-                      "endDate": "2024-04-18T15:00:00.000Z",
-                      "discountSetting": {
-                        "discountType": "PERCENTAGE"
+                      "id":"1d9828ab75184a2588af971f92f12df7",
+                      "endDate":"2024-06-27T15:00:00.000Z",
+                      "discountSetting":{
+                        "discountType":"PERCENTAGE"
                       }
                     }
                   ]
                 }
               ]
             },
-            "promotions": {
-              "promotionalOffers": [
+            "promotions":{
+              "promotionalOffers":[
                 {
-                  "promotionalOffers": [
+                  "promotionalOffers":[
                     {
-                      "startDate": "2024-04-11T15:00:00.000Z",
-                      "endDate": "2024-04-18T15:00:00.000Z",
-                      "discountSetting": {
-                        "discountType": "PERCENTAGE",
-                        "discountPercentage": 0
+                      "startDate":"2024-06-20T15:00:00.000Z",
+                      "endDate":"2024-06-27T15:00:00.000Z",
+                      "discountSetting":{
+                        "discountType":"PERCENTAGE",
+                        "discountPercentage":0
                       }
                     }
                   ]
                 }
               ],
-              "upcomingPromotionalOffers": []
-            }
-          },
-          {
-            "title": "The Big Con",
-            "id": "d0ae213cddb44791a607056fcc6040f1",
-            "namespace": "a1f2a672b08f45d28bb6b65eef6ffe41",
-            "description": "The Big Con",
-            "effectiveDate": "2021-08-31T12:00:00.000Z",
-            "offerType": "BASE_GAME",
-            "expiryDate": null,
-            "viewableDate": "2021-08-31T12:00:00.000Z",
-            "status": "ACTIVE",
-            "isCodeRedemptionOnly": false,
-            "keyImages": [
-              {
-                "type": "OfferImageTall",
-                "url": "https://cdn1.epicgames.com/offer/a1f2a672b08f45d28bb6b65eef6ffe41/EGS_TheBigCon_MightyYell_S2_1200x1600-c7fcd5da3c2904f83644165f4e7c1bc9"
-              },
-              {
-                "type": "OfferImageWide",
-                "url": "https://cdn1.epicgames.com/offer/a1f2a672b08f45d28bb6b65eef6ffe41/EGS_TheBigCon_MightyYell_S1_2560x1440-532e70014a0082daf975946d402a4c85"
-              },
-              {
-                "type": "Thumbnail",
-                "url": "https://cdn1.epicgames.com/offer/a1f2a672b08f45d28bb6b65eef6ffe41/EGS_TheBigCon_MightyYell_S2_1200x1600-c7fcd5da3c2904f83644165f4e7c1bc9"
-              }
-            ],
-            "seller": {
-              "id": "o-rqvssgn2hhj58wv5bc6eueqswz2un4",
-              "name": "Skybound Game Studios, Inc."
-            },
-            "productSlug": "the-big-con",
-            "urlSlug": "the-big-con",
-            "url": null,
-            "items": [
-              {
-                "id": "0c61a6548e284ff09436f5d12f3a5404",
-                "namespace": "a1f2a672b08f45d28bb6b65eef6ffe41"
-              }
-            ],
-            "customAttributes": [
-              {
-                "key": "com.epicgames.app.blacklist",
-                "value": "[]"
-              },
-              {
-                "key": "com.epicgames.app.productSlug",
-                "value": "the-big-con"
-              }
-            ],
-            "categories": [
-              {
-                "path": "freegames"
-              },
-              {
-                "path": "games"
-              },
-              {
-                "path": "games/edition"
-              },
-              {
-                "path": "games/edition/base"
-              },
-              {
-                "path": "applications"
-              }
-            ],
-            "tags": [
-              {
-                "id": "1370"
-              },
-              {
-                "id": "9547"
-              },
-              {
-                "id": "1116"
-              },
-              {
-                "id": "1117"
-              },
-              {
-                "id": "1263"
-              },
-              {
-                "id": "15375"
-              }
-            ],
-            "catalogNs": {
-              "mappings": [
-                {
-                  "pageSlug": "the-big-con",
-                  "pageType": "productHome"
-                }
-              ]
-            },
-            "offerMappings": [],
-            "price": {
-              "totalPrice": {
-                "discountPrice": 1249,
-                "originalPrice": 1249,
-                "voucherDiscount": 0,
-                "discount": 0,
-                "currencyCode": "EUR",
-                "currencyInfo": {
-                  "decimals": 2
-                },
-                "fmtPrice": {
-                  "originalPrice": "€12.49",
-                  "discountPrice": "€12.49",
-                  "intermediatePrice": "€12.49"
-                }
-              },
-              "lineOffers": [
-                {
-                  "appliedRules": []
-                }
-              ]
-            },
-            "promotions": {
-              "promotionalOffers": [],
-              "upcomingPromotionalOffers": [
-                {
-                  "promotionalOffers": [
-                    {
-                      "startDate": "2024-04-18T15:00:00.000Z",
-                      "endDate": "2024-04-25T15:00:00.000Z",
-                      "discountSetting": {
-                        "discountType": "PERCENTAGE",
-                        "discountPercentage": 0
-                      }
-                    }
-                  ]
-                }
+              "upcomingPromotionalOffers":[
+
               ]
             }
           },
           {
-            "title": "Lost Castle: The Old Ones Awaken",
-            "id": "4a88d0dc64114b20b67339c74543f859",
-            "namespace": "ab29925a0a9a49598adba45d108ceb3e",
-            "description": "The Old Ones Awaken adds new levels to explore, new enemies to defeat, and new bosses to face along with a host exciting new weapons and equipment to wield and wear.",
-            "effectiveDate": "2024-02-08T16:00:00.000Z",
-            "offerType": "ADD_ON",
-            "expiryDate": null,
-            "viewableDate": "2024-02-01T16:00:00.000Z",
-            "status": "ACTIVE",
-            "isCodeRedemptionOnly": false,
-            "keyImages": [
+            "title":"Lost Castle: The Old Ones Awaken",
+            "id":"4a88d0dc64114b20b67339c74543f859",
+            "namespace":"ab29925a0a9a49598adba45d108ceb3e",
+            "description":"The Old Ones Awaken adds new levels to explore, new enemies to defeat, and new bosses to face along with a host exciting new weapons and equipment to wield and wear.",
+            "effectiveDate":"2024-02-08T16:00:00.000Z",
+            "offerType":"ADD_ON",
+            "expiryDate":null,
+            "viewableDate":"2024-02-01T16:00:00.000Z",
+            "status":"ACTIVE",
+            "isCodeRedemptionOnly":false,
+            "keyImages":[
               {
-                "type": "OfferImageWide",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-r390n.png"
+                "type":"OfferImageWide",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-r390n.png"
               },
               {
-                "type": "OfferImageTall",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1qvy6.jpg"
+                "type":"OfferImageTall",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1qvy6.jpg"
               },
               {
-                "type": "Thumbnail",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1qvy6.jpg"
+                "type":"Thumbnail",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1qvy6.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-5fr2h.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-5fr2h.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-tl3jh.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-tl3jh.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-ooqww.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-ooqww.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-y89ep.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-y89ep.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-sagu3.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-sagu3.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1309n.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1309n.jpg"
               },
               {
-                "type": "featuredMedia",
-                "url": "https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1mwvz.jpg"
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/a6d76157ad884f2c9aa470b30da9e2ff/lost-castle-1mwvz.jpg"
               }
             ],
-            "seller": {
-              "id": "o-ze7grkplqlrzc92lepkjv4xpaj7gn8",
-              "name": "Another Indie Studio Limited"
+            "seller":{
+              "id":"o-ze7grkplqlrzc92lepkjv4xpaj7gn8",
+              "name":"Another Indie Studio Limited"
             },
-            "productSlug": null,
-            "urlSlug": "lost-castle-the-old-ones-awaken",
-            "url": null,
-            "items": [
+            "productSlug":null,
+            "urlSlug":"lost-castle-the-old-ones-awaken",
+            "url":null,
+            "items":[
               {
-                "id": "30f2fedfe5af4e9d96e151696f372a70",
-                "namespace": "ab29925a0a9a49598adba45d108ceb3e"
+                "id":"30f2fedfe5af4e9d96e151696f372a70",
+                "namespace":"ab29925a0a9a49598adba45d108ceb3e"
               }
             ],
-            "customAttributes": [
+            "customAttributes":[
               {
-                "key": "isManuallySetRefundableType",
-                "value": "true"
+                "key":"isManuallySetRefundableType",
+                "value":"true"
               },
               {
-                "key": "autoGeneratedPrice",
-                "value": "false"
+                "key":"autoGeneratedPrice",
+                "value":"false"
               },
               {
-                "key": "isManuallySetViewableDate",
-                "value": "true"
+                "key":"isManuallySetViewableDate",
+                "value":"true"
               },
               {
-                "key": "isManuallySetPCReleaseDate",
-                "value": "false"
+                "key":"isManuallySetPCReleaseDate",
+                "value":"false"
               },
               {
-                "key": "isBlockchainUsed",
-                "value": "false"
+                "key":"isBlockchainUsed",
+                "value":"false"
               }
             ],
-            "categories": [
+            "categories":[
               {
-                "path": "addons"
+                "path":"addons"
               },
               {
-                "path": "freegames"
+                "path":"freegames"
               },
               {
-                "path": "addons/durable"
+                "path":"addons/durable"
               }
             ],
-            "tags": [
+            "tags":[
               {
-                "id": "1264"
+                "id":"1264"
               },
               {
-                "id": "1265"
+                "id":"1265"
               },
               {
-                "id": "1367"
+                "id":"1367"
               },
               {
-                "id": "1370"
+                "id":"1370"
               },
               {
-                "id": "1083"
+                "id":"1083"
               },
               {
-                "id": "9547"
+                "id":"9547"
               },
               {
-                "id": "35244"
+                "id":"35244"
               },
               {
-                "id": "9549"
+                "id":"9549"
               }
             ],
-            "catalogNs": {
-              "mappings": [
+            "catalogNs":{
+              "mappings":[
                 {
-                  "pageSlug": "lost-castle-abb2e2",
-                  "pageType": "productHome"
+                  "pageSlug":"lost-castle-abb2e2",
+                  "pageType":"productHome"
                 }
               ]
             },
-            "offerMappings": [
+            "offerMappings":[
               {
-                "pageSlug": "lost-castle-lost-castle-the-old-ones-awaken-db1545",
-                "pageType": "offer"
+                "pageSlug":"lost-castle-lost-castle-the-old-ones-awaken-db1545",
+                "pageType":"offer"
               }
             ],
-            "price": {
-              "totalPrice": {
-                "discountPrice": 179,
-                "originalPrice": 359,
-                "voucherDiscount": 0,
-                "discount": 180,
-                "currencyCode": "EUR",
-                "currencyInfo": {
-                  "decimals": 2
+            "price":{
+              "totalPrice":{
+                "discountPrice":179,
+                "originalPrice":359,
+                "voucherDiscount":0,
+                "discount":180,
+                "currencyCode":"EUR",
+                "currencyInfo":{
+                  "decimals":2
                 },
-                "fmtPrice": {
-                  "originalPrice": "€3.59",
-                  "discountPrice": "€1.79",
-                  "intermediatePrice": "€1.79"
+                "fmtPrice":{
+                  "originalPrice":"€3.59",
+                  "discountPrice":"€1.79",
+                  "intermediatePrice":"€1.79"
                 }
               },
-              "lineOffers": [
+              "lineOffers":[
                 {
-                  "appliedRules": [
+                  "appliedRules":[
                     {
-                      "id": "0e8b039bbc6c412aa52471972c2313b3",
-                      "endDate": "2024-04-25T15:00:00.000Z",
-                      "discountSetting": {
-                        "discountType": "PERCENTAGE"
+                      "id":"480b5973903f43778376295c36db7085",
+                      "endDate":"2024-06-27T15:00:00.000Z",
+                      "discountSetting":{
+                        "discountType":"PERCENTAGE"
                       }
                     }
                   ]
                 }
               ]
             },
-            "promotions": {
-              "promotionalOffers": [
+            "promotions":{
+              "promotionalOffers":[
                 {
-                  "promotionalOffers": [
+                  "promotionalOffers":[
                     {
-                      "startDate": "2024-04-11T15:00:00.000Z",
-                      "endDate": "2024-04-25T15:00:00.000Z",
-                      "discountSetting": {
-                        "discountType": "PERCENTAGE",
-                        "discountPercentage": 50
+                      "startDate":"2024-06-13T15:00:00.000Z",
+                      "endDate":"2024-06-27T15:00:00.000Z",
+                      "discountSetting":{
+                        "discountType":"PERCENTAGE",
+                        "discountPercentage":50
                       }
                     }
                   ]
                 }
               ],
-              "upcomingPromotionalOffers": []
+              "upcomingPromotionalOffers":[
+
+              ]
             }
           },
           {
-            "title": "Town of Salem 2",
-            "id": "f4c04d050f8c459ab1261ecbeeb5720a",
-            "namespace": "ab9f1f7354a8418388b43132d420524a",
-            "description": "Step into the Town of Salem, a realm of Mystery and Deceit awaits! Join us in this thrilling online strategy game. Experience paranoia, taste triumph, and confront Murder in every move!",
-            "effectiveDate": "2024-04-18T15:00:00.000Z",
-            "offerType": "BASE_GAME",
-            "expiryDate": null,
-            "viewableDate": "2024-04-11T15:00:00.000Z",
-            "status": "ACTIVE",
-            "isCodeRedemptionOnly": false,
-            "keyImages": [
+            "title":"Cat Quest II",
+            "id":"2a8398bbcb524c379ab21e31f0be5aeb",
+            "namespace":"58004246d72f474a957ff5f57b9684ca",
+            "description":"Open-world action-RPG in a fantasy realm of cats and dogs. CAT QUEST II lets you play solo or with a friend, as both a cat and dog! Quest in a world filled with magic, defeat monsters and collect loot in a catventure like never before!",
+            "effectiveDate":"2024-05-02T15:00:00.000Z",
+            "offerType":"BASE_GAME",
+            "expiryDate":null,
+            "viewableDate":"2024-04-30T13:00:00.000Z",
+            "status":"ACTIVE",
+            "isCodeRedemptionOnly":false,
+            "keyImages":[
               {
-                "type": "OfferImageWide",
-                "url": "https://cdn1.epicgames.com/spt-assets/5461784e424b43709943f14954a9f83f/town-of-salem-2-1imcg.png"
+                "type":"OfferImageWide",
+                "url":"https://cdn1.epicgames.com/spt-assets/fe812f94c42e44e986691a84c796952d/cat-quest-ii-cj318.jpg"
               },
               {
-                "type": "OfferImageTall",
-                "url": "https://cdn1.epicgames.com/spt-assets/5461784e424b43709943f14954a9f83f/town-of-salem-2-f0yj3.png"
+                "type":"OfferImageTall",
+                "url":"https://cdn1.epicgames.com/spt-assets/fe812f94c42e44e986691a84c796952d/cat-quest-ii-13gb6.jpg"
               },
               {
-                "type": "Thumbnail",
-                "url": "https://cdn1.epicgames.com/spt-assets/5461784e424b43709943f14954a9f83f/town-of-salem-2-f0yj3.png"
+                "type":"Thumbnail",
+                "url":"https://cdn1.epicgames.com/spt-assets/fe812f94c42e44e986691a84c796952d/cat-quest-ii-13gb6.jpg"
               }
             ],
-            "seller": {
-              "id": "o-bulyczbzrbg4uxq47nrggfr7alesxp",
-              "name": "BlankMediaGames"
+            "seller":{
+              "id":"o-yrjx9sk66ym9ktjnjml6qzsyjhczdz",
+              "name":"Kepler Interactive"
             },
-            "productSlug": null,
-            "urlSlug": "64c9a487c004437ebc51a804cb9d2e1a",
-            "url": null,
-            "items": [
+            "productSlug":null,
+            "urlSlug":"17c196bb2302467d9c930289a0b70562",
+            "url":null,
+            "items":[
               {
-                "id": "96fc472dfb804453ac6bb2a3664ec8de",
-                "namespace": "ab9f1f7354a8418388b43132d420524a"
+                "id":"9f330ec636a342feadd15e2f1142bb29",
+                "namespace":"58004246d72f474a957ff5f57b9684ca"
               }
             ],
-            "customAttributes": [
+            "customAttributes":[
               {
-                "key": "autoGeneratedPrice",
-                "value": "false"
+                "key":"autoGeneratedPrice",
+                "value":"false"
               },
               {
-                "key": "isManuallySetViewableDate",
-                "value": "true"
+                "key":"isManuallySetViewableDate",
+                "value":"true"
               },
               {
-                "key": "isPromotionalContentUsed",
-                "value": "null"
+                "key":"isManuallySetPCReleaseDate",
+                "value":"true"
               },
               {
-                "key": "isManuallySetPCReleaseDate",
-                "value": "true"
-              },
-              {
-                "key": "isBlockchainUsed",
-                "value": "false"
+                "key":"isBlockchainUsed",
+                "value":"false"
               }
             ],
-            "categories": [
+            "categories":[
               {
-                "path": "freegames"
+                "path":"freegames"
               },
               {
-                "path": "games"
+                "path":"games"
               },
               {
-                "path": "games/edition"
+                "path":"games/edition"
               },
               {
-                "path": "games/edition/base"
+                "path":"games/edition/base"
               }
             ],
-            "tags": [
+            "tags":[
               {
-                "id": "1264"
+                "id":"1264"
               },
               {
-                "id": "1296"
+                "id":"1296"
               },
               {
-                "id": "29088"
+                "id":"21894"
               },
               {
-                "id": "1299"
+                "id":"1367"
               },
               {
-                "id": "1110"
+                "id":"19847"
               },
               {
-                "id": "22776"
+                "id":"1336"
               },
               {
-                "id": "1115"
+                "id":"1370"
               },
               {
-                "id": "9547"
+                "id":"9547"
               },
               {
-                "id": "10719"
+                "id":"21147"
               }
             ],
-            "catalogNs": {
-              "mappings": [
+            "catalogNs":{
+              "mappings":[
                 {
-                  "pageSlug": "town-of-salem-2-ab6497",
-                  "pageType": "productHome"
+                  "pageSlug":"cat-quest-ii-9dbefc",
+                  "pageType":"productHome"
                 }
               ]
             },
-            "offerMappings": [
+            "offerMappings":[
               {
-                "pageSlug": "town-of-salem-2-ab6497",
-                "pageType": "productHome"
+                "pageSlug":"cat-quest-ii-9dbefc",
+                "pageType":"productHome"
               }
             ],
-            "price": {
-              "totalPrice": {
-                "discountPrice": 0,
-                "originalPrice": 0,
-                "voucherDiscount": 0,
-                "discount": 0,
-                "currencyCode": "EUR",
-                "currencyInfo": {
-                  "decimals": 2
+            "price":{
+              "totalPrice":{
+                "discountPrice":1349,
+                "originalPrice":1349,
+                "voucherDiscount":0,
+                "discount":0,
+                "currencyCode":"EUR",
+                "currencyInfo":{
+                  "decimals":2
                 },
-                "fmtPrice": {
-                  "originalPrice": "0",
-                  "discountPrice": "0",
-                  "intermediatePrice": "0"
+                "fmtPrice":{
+                  "originalPrice":"€13.49",
+                  "discountPrice":"€13.49",
+                  "intermediatePrice":"€13.49"
                 }
               },
-              "lineOffers": [
+              "lineOffers":[
                 {
-                  "appliedRules": []
+                  "appliedRules":[
+
+                  ]
                 }
               ]
             },
-            "promotions": {
-              "promotionalOffers": [],
-              "upcomingPromotionalOffers": [
+            "promotions":null
+          },
+          {
+            "title":"LISA: The Definitive Edition",
+            "id":"944b5b5d646d46bc92bc33edfe983d26",
+            "namespace":"ca3a9d16d131478c97fd56c138a6511a",
+            "description":"Explore Olathe and unmask its twisted secrets with LISA: The Definitive Edition, including the original narrative-driven RPG LISA: The Painful and its sequel LISA: The Joyful.",
+            "effectiveDate":"2024-05-21T16:00:00.000Z",
+            "offerType":"BUNDLE",
+            "expiryDate":null,
+            "viewableDate":"2024-05-21T16:00:00.000Z",
+            "status":"ACTIVE",
+            "isCodeRedemptionOnly":false,
+            "keyImages":[
+              {
+                "type":"OfferImageTall",
+                "url":"https://cdn1.epicgames.com/offer/ca3a9d16d131478c97fd56c138a6511a/EGS_LISATheDefinitiveEdition_DingalingProductions_Bundles_S2_1200x1600-4a9b4fc6e06e8aff136c1a3cf18292ae"
+              },
+              {
+                "type":"OfferImageWide",
+                "url":"https://cdn1.epicgames.com/offer/ca3a9d16d131478c97fd56c138a6511a/EGS_LISATheDefinitiveEdition_DingalingProductions_Bundles_S1_2560x1440-55b66eb2046507e58eac435c21331bd5"
+              },
+              {
+                "type":"Thumbnail",
+                "url":"https://cdn1.epicgames.com/offer/ca3a9d16d131478c97fd56c138a6511a/EGS_LISATheDefinitiveEdition_DingalingProductions_Bundles_S2_1200x1600-4a9b4fc6e06e8aff136c1a3cf18292ae"
+              }
+            ],
+            "seller":{
+              "id":"o-256f2bc2a35049a39ceae0f57d01bb",
+              "name":"Serenity Forge"
+            },
+            "productSlug":"lisa-the-definitive-edition",
+            "urlSlug":"lisa-the-definitive-edition",
+            "url":null,
+            "items":[
+              {
+                "id":"2cde880361534ed4bafd0a9bb502c543",
+                "namespace":"2052c58b9f64498386cbbbc85df90bbf"
+              },
+              {
+                "id":"a7729179144d41ec9e0a7e1c09ad2f35",
+                "namespace":"87de7c0aad7944899fb6d2b05e13b108"
+              }
+            ],
+            "customAttributes":[
+              {
+                "key":"com.epicgames.app.productSlug",
+                "value":"lisa-the-definitive-edition"
+              }
+            ],
+            "categories":[
+              {
+                "path":"bundles"
+              },
+              {
+                "path":"freegames"
+              },
+              {
+                "path":"games"
+              },
+              {
+                "path":"bundles/games"
+              },
+              {
+                "path":"applications"
+              }
+            ],
+            "tags":[
+              {
+                "id":"1367"
+              },
+              {
+                "id":"1370"
+              },
+              {
+                "id":"9547"
+              },
+              {
+                "id":"1117"
+              },
+              {
+                "id":"9549"
+              },
+              {
+                "id":"1263"
+              }
+            ],
+            "catalogNs":{
+              "mappings":null
+            },
+            "offerMappings":null,
+            "price":{
+              "totalPrice":{
+                "discountPrice":2419,
+                "originalPrice":2419,
+                "voucherDiscount":0,
+                "discount":0,
+                "currencyCode":"EUR",
+                "currencyInfo":{
+                  "decimals":2
+                },
+                "fmtPrice":{
+                  "originalPrice":"€24.19",
+                  "discountPrice":"€24.19",
+                  "intermediatePrice":"€24.19"
+                }
+              },
+              "lineOffers":[
                 {
-                  "promotionalOffers": [
+                  "appliedRules":[
+
+                  ]
+                }
+              ]
+            },
+            "promotions":null
+          },
+          {
+            "title":"Rumble Club - Free Game of the Week Bonus",
+            "id":"fab45428480549c1bff5c1fedfc0a648",
+            "namespace":"39d4425dc6f44b92b44c025d4257c737",
+            "description":"FREE for Epic Game Store players! Claim this free bundle, launch the game, complete the tutorial, and collect your reward!\n\nGet:\n- Epic Game Store Exclusive Emote: We Gamin'\n- 1,000 Gold\n- 200 Gems",
+            "effectiveDate":"2024-06-20T15:00:00.000Z",
+            "offerType":"ADD_ON",
+            "expiryDate":"2024-06-27T15:00:00.000Z",
+            "viewableDate":"2024-06-13T17:29:33.000Z",
+            "status":"ACTIVE",
+            "isCodeRedemptionOnly":false,
+            "keyImages":[
+              {
+                "type":"OfferImageWide",
+                "url":"https://cdn1.epicgames.com/spt-assets/dcc6ac462e384ff1a3b388fe7be5d51c/rumble-club-nrfyr.png"
+              },
+              {
+                "type":"OfferImageTall",
+                "url":"https://cdn1.epicgames.com/spt-assets/dcc6ac462e384ff1a3b388fe7be5d51c/rumble-club-14gz5.png"
+              },
+              {
+                "type":"Thumbnail",
+                "url":"https://cdn1.epicgames.com/spt-assets/dcc6ac462e384ff1a3b388fe7be5d51c/rumble-club-14gz5.png"
+              },
+              {
+                "type":"featuredMedia",
+                "url":"https://cdn1.epicgames.com/spt-assets/dcc6ac462e384ff1a3b388fe7be5d51c/rumble-club-dxoi0.png"
+              }
+            ],
+            "seller":{
+              "id":"o-gce8vd5wazjwuagsqnfxyhtp62z6mx",
+              "name":"Lightfox Games"
+            },
+            "productSlug":null,
+            "urlSlug":"rumble-club-free-game-of-the-week-bonus",
+            "url":null,
+            "items":[
+              {
+                "id":"ff776d42817a49d5af841b9d4c3a9678",
+                "namespace":"39d4425dc6f44b92b44c025d4257c737"
+              }
+            ],
+            "customAttributes":[
+              {
+                "key":"isManuallySetRefundableType",
+                "value":"true"
+              },
+              {
+                "key":"autoGeneratedPrice",
+                "value":"false"
+              },
+              {
+                "key":"isManuallySetViewableDate",
+                "value":"true"
+              },
+              {
+                "key":"isPromotionalContentUsed",
+                "value":"true"
+              },
+              {
+                "key":"isManuallySetPCReleaseDate",
+                "value":"false"
+              },
+              {
+                "key":"isBlockchainUsed",
+                "value":"false"
+              }
+            ],
+            "categories":[
+              {
+                "path":"addons"
+              },
+              {
+                "path":"freegames"
+              },
+              {
+                "path":"addons/durable"
+              }
+            ],
+            "tags":[
+              {
+                "id":"1216"
+              },
+              {
+                "id":"1264"
+              },
+              {
+                "id":"1344"
+              },
+              {
+                "id":"29088"
+              },
+              {
+                "id":"1299"
+              },
+              {
+                "id":"33639"
+              },
+              {
+                "id":"22776"
+              },
+              {
+                "id":"9547"
+              },
+              {
+                "id":"9549"
+              }
+            ],
+            "catalogNs":{
+              "mappings":[
+                {
+                  "pageSlug":"rumble-club-674364",
+                  "pageType":"productHome"
+                }
+              ]
+            },
+            "offerMappings":[
+              {
+                "pageSlug":"rumble-club-rumble-club-free-game-of-the-week-bonus-fe7b22",
+                "pageType":"offer"
+              }
+            ],
+            "price":{
+              "totalPrice":{
+                "discountPrice":0,
+                "originalPrice":0,
+                "voucherDiscount":0,
+                "discount":0,
+                "currencyCode":"EUR",
+                "currencyInfo":{
+                  "decimals":2
+                },
+                "fmtPrice":{
+                  "originalPrice":"0",
+                  "discountPrice":"0",
+                  "intermediatePrice":"0"
+                }
+              },
+              "lineOffers":[
+                {
+                  "appliedRules":[
+
+                  ]
+                }
+              ]
+            },
+            "promotions":{
+              "promotionalOffers":[
+                {
+                  "promotionalOffers":[
                     {
-                      "startDate": "2024-04-18T15:00:00.000Z",
-                      "endDate": "2024-04-25T15:00:00.000Z",
-                      "discountSetting": {
-                        "discountType": "PERCENTAGE",
-                        "discountPercentage": 0
+                      "startDate":"2024-06-20T15:00:00.000Z",
+                      "endDate":"2024-06-27T15:00:00.000Z",
+                      "discountSetting":{
+                        "discountType":"PERCENTAGE",
+                        "discountPercentage":0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "upcomingPromotionalOffers":[
+
+              ]
+            }
+          },
+          {
+            "title":"Sunless Skies: Sovereign Edition",
+            "id":"d64e188ad8034ffcacd038c4713f5c0a",
+            "namespace":"3f6f54e0f8164224b817d23075cbb2a8",
+            "description":"SAIL THE STARS. BETRAY YOUR QUEEN. MURDER A SUN. Sunless Skies is a Gothic Horror roleplay game with a focus on exploration and exquisite storytelling.",
+            "effectiveDate":"2024-06-27T15:00:00.000Z",
+            "offerType":"BASE_GAME",
+            "expiryDate":null,
+            "viewableDate":"2024-06-20T15:00:00.000Z",
+            "status":"ACTIVE",
+            "isCodeRedemptionOnly":false,
+            "keyImages":[
+              {
+                "type":"OfferImageWide",
+                "url":"https://cdn1.epicgames.com/spt-assets/c940bf4524614968826999d859f79dbd/sunless-skies-1v5ll.jpg"
+              },
+              {
+                "type":"OfferImageTall",
+                "url":"https://cdn1.epicgames.com/spt-assets/c940bf4524614968826999d859f79dbd/sunless-skies-1f06o.png"
+              },
+              {
+                "type":"Thumbnail",
+                "url":"https://cdn1.epicgames.com/spt-assets/c940bf4524614968826999d859f79dbd/sunless-skies-1f06o.png"
+              }
+            ],
+            "seller":{
+              "id":"o-rtt3u6nfx2dlvv3zuwr53utk9gjz82",
+              "name":"Failbetter Games"
+            },
+            "productSlug":null,
+            "urlSlug":"5a137d42abcb451f9a1c65542f096479",
+            "url":null,
+            "items":[
+              {
+                "id":"c83f53b734d54c059bd8b29e47368994",
+                "namespace":"3f6f54e0f8164224b817d23075cbb2a8"
+              }
+            ],
+            "customAttributes":[
+              {
+                "key":"autoGeneratedPrice",
+                "value":"false"
+              },
+              {
+                "key":"isManuallySetViewableDate",
+                "value":"true"
+              },
+              {
+                "key":"isManuallySetPCReleaseDate",
+                "value":"true"
+              },
+              {
+                "key":"isBlockchainUsed",
+                "value":"false"
+              }
+            ],
+            "categories":[
+              {
+                "path":"freegames"
+              },
+              {
+                "path":"games"
+              },
+              {
+                "path":"games/edition"
+              },
+              {
+                "path":"games/edition/base"
+              }
+            ],
+            "tags":[
+              {
+                "id":"1218"
+              },
+              {
+                "id":"21894"
+              },
+              {
+                "id":"1367"
+              },
+              {
+                "id":"19847"
+              },
+              {
+                "id":"1370"
+              },
+              {
+                "id":"1083"
+              },
+              {
+                "id":"9547"
+              },
+              {
+                "id":"9549"
+              },
+              {
+                "id":"10719"
+              }
+            ],
+            "catalogNs":{
+              "mappings":[
+                {
+                  "pageSlug":"sunless-skies-bb4947",
+                  "pageType":"productHome"
+                }
+              ]
+            },
+            "offerMappings":[
+              {
+                "pageSlug":"sunless-skies-bb4947",
+                "pageType":"productHome"
+              }
+            ],
+            "price":{
+              "totalPrice":{
+                "discountPrice":2299,
+                "originalPrice":2299,
+                "voucherDiscount":0,
+                "discount":0,
+                "currencyCode":"EUR",
+                "currencyInfo":{
+                  "decimals":2
+                },
+                "fmtPrice":{
+                  "originalPrice":"€22.99",
+                  "discountPrice":"€22.99",
+                  "intermediatePrice":"€22.99"
+                }
+              },
+              "lineOffers":[
+                {
+                  "appliedRules":[
+
+                  ]
+                }
+              ]
+            },
+            "promotions":{
+              "promotionalOffers":[
+
+              ],
+              "upcomingPromotionalOffers":[
+                {
+                  "promotionalOffers":[
+                    {
+                      "startDate":"2024-06-27T15:00:00.000Z",
+                      "endDate":"2024-07-04T15:00:00.000Z",
+                      "discountSetting":{
+                        "discountType":"PERCENTAGE",
+                        "discountPercentage":0
                       }
                     }
                   ]
@@ -674,14 +964,14 @@
             }
           }
         ],
-        "paging": {
-          "count": 1000,
-          "total": 4
+        "paging":{
+          "count":1000,
+          "total":6
         }
       }
     }
   },
-  "extensions": {
+  "extensions":{
 
   }
 }
