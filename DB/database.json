@@ -21,6 +21,20 @@
       "title": "Freshly Frosted",
       "free_from": "2024-06-20T15:00:00.000Z",
       "free_until": "2024-06-27T15:00:00.000Z"
+    },
+    {
+      "id": "53a6356d1f4945e58d8c8e9f511c3c9d",
+      "slug": "ghostwire-tokyo",
+      "title": "Ghostwire: Tokyo",
+      "free_from": "2024-10-31T15:00:00.000Z",
+      "free_until": "2024-11-07T16:00:00.000Z"
+    },
+    {
+      "id": "d2db7ad960a84551825707261c8437c4",
+      "slug": "witch-it-3624a9",
+      "title": "Witch It",
+      "free_from": "2024-10-31T15:00:00.000Z",
+      "free_until": "2024-11-07T15:00:00.000Z"
     }
   ],
   "commands": {
