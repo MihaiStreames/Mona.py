@@ -1,5 +1,6 @@
 import json
 
+from datetime import datetime
 
 class ServerInstance:
     def __init__(self, id, database_ref):
@@ -67,7 +68,9 @@ class JSONDB:
 
         for game in announced_games:
             if game['id'] == game_id:
-                if game['free_until'] < current_time:
+                # Convert 'free_until' string to datetime for comparison
+                free_until = datetime.fromisoformat(game['free_until'].replace('Z', '+00:00'))
+                if free_until < current_time:
                     games_to_remove.append(game)
                 else:
                     is_announced = True
